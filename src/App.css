@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+}
+.flex.align-items-center{
+  align-items: center
+}
+.flex.align-items-start{
+  align-items: start
+}
+.flex.align-items-end{
+  align-items: end
+}
