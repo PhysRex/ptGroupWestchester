@@ -1,8 +1,8 @@
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 import Routes from './Routes';
 
 
 export {
-  Navbar,
+  NavBar,
   Routes,
 };

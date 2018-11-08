@@ -1,36 +1,25 @@
+import _ from 'lodash';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Menu, Icon } from 'semantic-ui-react';
 
+import { homePage, MenuPagesForNavBar } from './config';
 
-const menuItems = [
-  {
-    name: 'home',
-  },
-  {
-    name: 'game',
-  },
-  {
-    name: 'dashboard',
-  },
-  {
-    name: 'profile',
-  },
-];
+const menuPages = MenuPagesForNavBar();
 
 /**
  * @param {string} current The current route (current state.activeItem also)
  * @param {string} menuItem THe menu item to check against 
  * @returns {boolean} True if current route (url pathname) matches Navbar item
  */
-const isActive = (current, menuItem) => {
-  if (current === '/' && menuItem === 'home') return true;
-  return current === menuItem || current === `/${menuItem}`;
-}
+const isActive = (current, page) => {
+  if (current === '/' && page === homePage) return true;
+  return current === page || current === `/${page}`;
+};
 
 
 export default class NavBar extends Component {
-  state = { activeItem: 'home' }
+  state = { activeItem: homePage }
 
   componentDidMount() {
     this.setState({
@@ -38,28 +27,32 @@ export default class NavBar extends Component {
     });
   }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name });
+  };
 
-  // updatedMenu = () => [...menuItems, ...this.props.updateMenu];
+  setNavHome = () => {
+    this.setState({ activeItem: homePage });
+  };
 
   render() {
     const { activeItem } = this.state
 
     return (
       <Menu secondary pointing style={{'padding': '0 10px'}}>
-        <Link to='/home'>
+        <Link to={`/${homePage}`} onClick={this.setNavHome}>
           <Icon circular name='dna' size='large' />
         </Link>
-        
+
         <Menu.Menu position='right'>
         {
-          menuItems.map(item => (
+          menuPages.map(page => (
             <Menu.Item 
               as={Link}
-              key={item.name}
-              to={`/${item.name}`}
-              name={item.name}
-              active={isActive(activeItem, item.name)}
+              key={page}
+              to={`/${page}`}
+              name={page}
+              active={isActive(activeItem, page)}
               onClick={this.handleItemClick}
             />
           ))
