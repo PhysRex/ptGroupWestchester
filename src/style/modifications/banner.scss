@@ -1,0 +1,25 @@
+
+
+$bannerHeight: 60vh;
+.banner-image {
+  position: relative;
+  // z-index: 1;
+  height: $bannerHeight;
+}
+
+.banner-image::before {
+  background-image: url('./assets/images/dryBark.JPG') !important;
+  background-size: cover !important;
+  height: $bannerHeight;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // opacity: .4;
+  // filter: grayscale(100%);
+  // filter: blur(1px);
+  filter:  sepia(100%) brightness(40%);
+}

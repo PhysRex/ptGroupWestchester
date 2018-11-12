@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react'
+import { Link, Route } from 'react-router-dom';
 
 import { HeadBanner } from '../templates';
 
 const Profile = ({ match }) => (
-  <Container>
+  <Container fluid>
     <HeadBanner
       content='Profile'
       subheader='User settings can be updated here'

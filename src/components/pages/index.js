@@ -1,5 +1,7 @@
 import Home from './Home';
 import Profile from './Profile';
+import Staff from './Staff';
+import Forms from './Forms';
 import Dashboard from './Dashboard';
 import ErrorPage from './ErrorPage';
 
@@ -9,6 +11,8 @@ import ErrorPage from './ErrorPage';
  */
 export default [
   Home,
+  Staff,
+  Forms,
   Profile, 
   Dashboard,
   ErrorPage,

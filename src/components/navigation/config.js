@@ -3,8 +3,8 @@ import Pages from '../pages';
 
 const homePage = 'Home';
 const errorPage = 'ErrorPage';
-const pagesToOmitOnRoute = [''];
-const pagesToOmitOnNavBar = [errorPage];
+const pagesToOmitOnRoute = ['Dashboard', 'Profile'];
+const pagesToOmitOnNavBar = [errorPage, 'Dashboard', 'Profile'];
 
 function ComponentPagesForRoutes() {
   return _.filter(Pages, ({ name }) => name !== pagesToOmitOnRoute);
@@ -17,8 +17,8 @@ function MenuPagesForNavBar() {
 
 
 export {
-  ComponentPagesForRoutes,
-  MenuPagesForNavBar,
   homePage,
   errorPage,
+  ComponentPagesForRoutes,
+  MenuPagesForNavBar,
 }

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { Menu, Icon } from 'semantic-ui-react';
+import { Segment, Menu, Icon } from 'semantic-ui-react';
 
 import { homePage, MenuPagesForNavBar } from './config';
 
@@ -35,15 +35,21 @@ export default class NavBar extends Component {
     this.setState({ activeItem: homePage });
   };
 
+
   render() {
     const { activeItem } = this.state
-
     return (
-      <Menu secondary pointing style={{'padding': '0 10px'}}>
+      <Menu
+        inverted
+        secondary
+        pointing
+        fixed={this.props.fixedNavLocation || ''}
+        className=""
+      >
         <Link to={`/${homePage}`} onClick={this.setNavHome}>
           <Icon circular name='dna' size='large' />
         </Link>
-
+  
         <Menu.Menu position='right'>
         {
           menuPages.map(page => (
@@ -52,7 +58,7 @@ export default class NavBar extends Component {
               key={page}
               to={`/${page}`}
               name={page}
-              active={isActive(activeItem, page)}
+              active={isActive(this.state.activeItem, page)}
               onClick={this.handleItemClick}
             />
           ))

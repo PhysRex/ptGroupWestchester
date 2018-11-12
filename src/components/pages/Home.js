@@ -1,17 +1,18 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
-import { HeadBanner, Login } from '../templates';
+import { HeadBanner, ContentBanner, DividedBanner } from '../templates';
 
 const Home = (props) => (
-  <Container>
+  <Container fluid>
     <HeadBanner
       content='Home'
       subheader='A brief description of the game, possibly rules'
     />
-    <Login
-      submitLogin={(login) => console.log('Login Request:\n', login)}//{props.submitLogin}
-      errors={props.errors}
+    <ContentBanner
+      content='Our goal is to improve and maintain your overall health and to empower you with an understanding of your condition and wellness plan.'
     />
+    <DividedBanner />
+    <DividedBanner />
   </Container>
 );
 

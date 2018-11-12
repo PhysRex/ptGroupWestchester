@@ -5,16 +5,24 @@ import {
  } from 'semantic-ui-react'
 
 const HeadBanner = ({ content, subheader }) => (
-  <Grid columns={12} >
-    <Grid.Row centered >
-      <Grid.Column width={12} textAlign='center'>
-        <Header
-          textAlign='center'
-          content={content}
-          subheader={subheader}
-        />
-      </Grid.Column>
-    </Grid.Row>
+  <Grid>
+    <Grid.Column textAlign='center' className="banner-image flex align-items-center justify-content-center">
+      <Header
+        textAlign='center'
+        size='huge'
+      >
+        <Header.Content
+          className="white"
+        >
+          {content}
+        </Header.Content>
+        <Header.Subheader
+          className="f-white"
+        >
+          {subheader}
+        </Header.Subheader>
+      </Header>
+    </Grid.Column>
   </Grid>
 );
 

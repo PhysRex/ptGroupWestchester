@@ -4,14 +4,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { NavBar, Routes } from './components/navigation';
 
 import 'semantic-ui-css/semantic.min.css';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar fixedNavLocation='top' />
           <Routes />
         </div>
       </Router>
