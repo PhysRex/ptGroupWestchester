@@ -1,6 +1,50 @@
 
 
 
-.margin-20 {
-  margin: 20px;
+@for $i from 0 through 20 {
+  $value: 5 * $i;
+  .margin- {
+    &top-#{$value} {
+      margin-top: $value + px;
+    }
+    &bottom-#{$value} {
+      margin-bottom: $value + px;
+    }
+    &top-bottom-#{$value} {
+      margin-top: $value + px;
+      margin-bottom: $value + px;
+    }
+    &left-#{$value} {
+      margin-left: $value + px;
+    }
+    &right-#{$value} {
+      margin-right: $value + px;
+    }
+    &left-right-#{$value} {
+      margin-left: $value + px;
+      margin-right: $value + px;
+    }
+  }
+  .f-margin- {
+    &top-#{$value} {
+      margin-top: $value + px !important;
+    }
+    &bottom-#{$value} {
+      margin-bottom: $value + px !important;
+    }
+    &top-bottom-#{$value} {
+      margin-top: $value + px !important;
+      margin-bottom: $value + px !important;
+    }
+    &left-#{$value} {
+      margin-left: $value + px !important;
+    }
+    &right-#{$value} {
+      margin-right: $value + px !important;
+    }
+    &left-right-#{$value} {
+      margin-left: $value + px !important;
+      margin-right: $value + px !important;
+    }
+  }
 }

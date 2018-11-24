@@ -1,16 +1,18 @@
 
 $white: #fff;
+$black: #000;
 $red: #f00;
 $green: #0f0;
 $blue: #00f;
 $ruby-red: #AD141E;
 
-.white { color: $white }
-.red { color: $red }
-.green { color: $green }
-.blue { color: $blue }
-
-.f-{
+.text- {
+  &white { color: $white }
+  &red { color: $red }
+  &green { color: $green }
+  &blue { color: $blue }
+}
+.f-text-{
   &white { color: $white !important}
   &red { color: $red !important}
   &green { color: $green !important}

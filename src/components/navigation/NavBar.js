@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { Segment, Menu, Icon } from 'semantic-ui-react';
+import { Grid, Menu, Icon } from 'semantic-ui-react';
 
 import { homePage, MenuPagesForNavBar } from './config';
 
@@ -44,26 +44,35 @@ export default class NavBar extends Component {
         secondary
         pointing
         fixed={this.props.fixedNavLocation || ''}
-        className=""
+        className="f-no-border"
       >
-        <Link to={`/${homePage}`} onClick={this.setNavHome}>
-          <Icon circular name='dna' size='large' />
+        <Link to={`/${homePage}`} onClick={this.setNavHome} className="no-link f-text-white">
+          <div className="flex align-items-center height-fill padding-left-right-10">
+            <Icon
+              name='dna'
+              size='large'
+            />
+            <span className="font-lgr">
+              Physical Therapy Group of Westchester
+            </span>
+          </div>
         </Link>
   
         <Menu.Menu position='right'>
-        {
-          menuPages.map(page => (
-            <Menu.Item 
-              as={Link}
-              key={page}
-              to={`/${page}`}
-              name={page}
-              active={isActive(this.state.activeItem, page)}
-              onClick={this.handleItemClick}
-            />
-          ))
-        }
-        </Menu.Menu>
+          {
+            menuPages.map(page => (
+              <Menu.Item 
+                as={Link}
+                key={page}
+                to={`/${page}`}
+                name={page}
+                active={isActive(activeItem, page)}
+                onClick={this.handleItemClick}
+                className="font-lgr"
+              />
+            ))
+          }
+          </Menu.Menu>
       </Menu>
     )
   }

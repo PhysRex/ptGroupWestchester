@@ -5,18 +5,18 @@ import {
   Image,
  } from 'semantic-ui-react'
 
- import {
-  practiceOutside,
-  practiceAerialView,
-  hengAndFamily,
-} from '../../assets/images';
+ import { TextContent } from './'
 
-const ContentBanner = ({ content }) => (
-  <Grid fluid columns={12} centered>
+const ContentBanner = ({ className, content }) => (
+  <Grid
+    columns={12}
+    centered
+  >
     <Grid.Column mobile={12} desktop={10}>
-      <p className="font-xl text-align-center">
-        {content}
-      </p>
+      <TextContent
+        className={className}
+        content={content}
+      />
     </Grid.Column>
   </Grid>
 );

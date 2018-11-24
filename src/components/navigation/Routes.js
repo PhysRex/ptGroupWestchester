@@ -8,10 +8,13 @@ import { homePage, errorPage, ComponentPagesForRoutes } from './config';
 
 
 const Pages = ComponentPagesForRoutes();
+console.log(Pages)
+console.log(Pages[ homePage])
+
 
 export const Routes = () => (
   <Switch>
-    <Route path='/' exact component={Pages[homePage]}/>
+    <Route path='/' exact component={Pages[homePage]}/> // FIXME: not working because array no object
     {
       Pages.map((page) =>
         <Route
@@ -21,7 +24,7 @@ export const Routes = () => (
         />
       )
     }
-    <Route component={Pages[errorPage]}/>
+    <Route component={Pages[errorPage]}/> // FIXME: not working because array no object
   </Switch>
 );
 

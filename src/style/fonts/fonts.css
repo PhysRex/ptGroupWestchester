@@ -1,0 +1,86 @@
+@font-face {
+  font-family:'ss-pika';
+  src: local('ss-pika'), url('./ss-pika/ss-pika.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+.ss-pika {
+  font-family: "ss-pika", sans-serif;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("./open-sans/OpenSans-Bold.ttf") format("truetype");
+}
+.OpenSans-Bold {
+  font-family: "OpenSans-Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  src: url("./open-sans/OpenSans-BoldItalic.ttf") format("truetype");
+}
+.OpenSans-BoldItalic {
+  font-family: "OpenSans-BoldItalic", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("./open-sans/OpenSans-ExtraBold.ttf") format("truetype");
+}
+.OpenSans-ExtraBold {
+  font-family: "OpenSans-ExtraBold", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  src: url("./open-sans/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+}
+.OpenSans-ExtraBoldItalic {
+  font-family: "OpenSans-ExtraBoldItalic", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("./open-sans/OpenSans-Italic.ttf") format("truetype");
+}
+.OpenSans-Italic {
+  font-family: "OpenSans-Italic", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("./open-sans/OpenSans-Light.ttf") format("truetype");
+}
+.OpenSans-Light {
+  font-family: "OpenSans-Light", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  src: url("./open-sans/OpenSans-LightItalic.ttf") format("truetype");
+}
+.OpenSans-LightItalic {
+  font-family: "OpenSans-LightItalic", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("./open-sans/OpenSans-Regular.ttf") format("truetype");
+}
+.OpenSans-Regular {
+  font-family: "OpenSans-Regular", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  src: url("./open-sans/OpenSans-Semibold.ttf") format("truetype");
+}
+.OpenSans-Semibold {
+  font-family: "OpenSans-Semibold", sans-serif;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiboldItalic";
+  src: url("./open-sans/OpenSans-SemiboldItalic.ttf") format("truetype");
+}
+.OpenSans-SemiboldItalic {
+  font-family: "OpenSans-SemiboldItalic", sans-serif;
+}

@@ -4,9 +4,16 @@
 @import './style/border';
 @import './style/color';
 @import './style/typography';
-@import './style/modifications/banner';
-@import './style/modifications/other';
+// @import './style/fonts'; //Loaded through the /style/scripts/customFontLoader.js script
+@import './style/scrollbar';
+@import './style/modifiers/image';
+@import './style/modifiers/banner';
+@import './style/modifiers/other';
 
 body {
-  // background-color: lightblue;
+  background-color: rgb(252, 245, 245);
+  color: $black;
+  // font-family: 'ss-pika', monospace;
+  font-family: 'Titillium Web', sans-serif;
+  @include textShadowDefault();
 }

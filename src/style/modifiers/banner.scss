@@ -1,0 +1,35 @@
+
+$bannerHeight: 102vh;
+@mixin bannerImage($imageName) {
+  .banner-image-#{$imageName} {
+    position: relative;
+    // z-index: 1;
+    height: $bannerHeight;
+    &::before {
+      background-image: url('./assets/images/' + $imageName + '.jpg') !important;
+      background-size: cover !important;
+      background-position: center;
+      background-attachment: fixed;
+      height: $bannerHeight;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // opacity: .4;
+      // filter: grayscale(100%);
+      // filter: blur(1px);
+      // filter: sepia(100%);
+      filter: brightness(120%);
+    }
+  }
+}
+
+
+@include bannerImage('dryBark');
+@include bannerImage('grayDryTrunk');
+@include bannerImage('beachSandWavesRock');
+@include bannerImage('beachSandWavy');
+@include bannerImage('mountainsRiveside');

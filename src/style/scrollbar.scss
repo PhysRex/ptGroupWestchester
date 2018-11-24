@@ -1,0 +1,61 @@
+/**
+ * The -webkit-scrollbar family of properties consists of seven different
+ * pseudo-elements that, together, comprise a full scrollbar UI element.
+ * -> https://css-tricks.com/almanac/properties/s/scrollbar/ (~2017)
+ * -> https://css-tricks.com/custom-scrollbars-in-webkit/ (~2011)
+**/
+
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  // max-height: 50vh;
+  /* padding-top: -2px !important */
+  /* padding-right: 5px !important */
+
+  // ::-webkit-scrollbar
+  //    -> Addresses the background of the bar itself (usually covered by the other elements)
+  &::-webkit-scrollbar {
+    width: 0.8em;
+
+    // ::-webkit-scrollbar-track
+    //    -> Addresses the empty space “below” the progress bar
+    &-track {
+      background-color: lightgray;
+      // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+  
+    // ::-webkit-scrollbar-thumb
+    //    -> addresses the draggable scrolling element that resizes depending on the size of the scrollable element
+    &-thumb {
+      background-color: rgb(156, 156, 156);
+      // border: 1px solid rgb(148, 148, 148);
+      border-radius: 2px;
+    }
+
+    // ::-webkit-scrollbar-button
+    //    -> addresses the directional buttons on the scrollbar
+    &-button {
+      //
+    }
+
+    // ::-webkit-scrollbar-track-piece
+    //    -> is the top-most layer of the the progress bar not covered by the draggable scrolling element (thumb)
+    &-track-piece {
+      //
+    }
+
+    // ::-webkit-scrollbar-corner
+    //    -> addresses the (usually) bottom corner of the scrollable element, where two scrollbars might meet
+    &-corner {
+      //
+    }
+  }
+
+  // ::-webkit-resizer
+  //    -> addresses the draggable resizing handle that appears above the scrollbar-corner at the bottom corner of some elements
+  &::-webkit-resizer {
+    //
+  }
+}
+
