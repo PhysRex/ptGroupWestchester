@@ -1,13 +1,11 @@
 import React from 'react';
 import { 
   Grid,
-  Header,
-  Image,
  } from 'semantic-ui-react'
 
  import { TextContent } from './'
 
-const ContentBanner = ({ className, content }) => (
+const QuoteBanner = ({ className, content }) => (
   <Grid
     columns={12}
     centered
@@ -22,4 +20,4 @@ const ContentBanner = ({ className, content }) => (
 );
 
 
-export default ContentBanner;
+export default QuoteBanner;

@@ -1,18 +1,18 @@
 @import './style/display';
 @import './style/scrollbar';
+@import './style/modifiers/color';
 @import './style/modifiers/margin';
 @import './style/modifiers/padding';
 @import './style/modifiers/border';
-@import './style/modifiers/color';
 @import './style/modifiers/typography';
 // @import './style/fonts'; //Loaded through the /style/scripts/customFontLoader.js script
 @import './style/modifiers/image';
-@import './style/element/other';
+@import './style/modifiers/shadows';
+@import './style/element/general';
 
 body {
   background-color: rgb(252, 245, 245);
   color: $black;
   // font-family: 'ss-pika', monospace;
   font-family: 'Titillium Web', sans-serif;
-  @include textShadowDefault();
 }

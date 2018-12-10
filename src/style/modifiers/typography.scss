@@ -31,6 +31,24 @@
   &xxlr {
     font-size: 3.5rem;
   }
+  &5rem {
+    font-size: 5rem;
+  }
+  &6rem {
+    font-size: 6rem;
+  }
+  &7rem {
+    font-size: 7rem;
+  }
+  &8rem {
+    font-size: 8rem;
+  }
+  &9rem {
+    font-size: 9rem;
+  }
+  &10rem {
+    font-size: 10rem;
+  }
 }
 
 .text-align- {
@@ -42,6 +60,21 @@
   }
   &center {
     text-align: center;
+  }
+}
+
+.vertical-align- {
+  &bottom {
+    vertical-align: bottom;
+  }
+  &middle {
+    vertical-align: middle;
+  }
+  &top {
+    vertical-align: top;
+  }
+  &baseline {
+    vertical-align: baseline;
   }
 }
 
@@ -70,6 +103,9 @@
     0 20px 20px rgba(0,0,0,.15);
 }
 .text-shadow- {
+  &none {
+    text-shadow: none;
+  }
   &default {
     @include textShadowDefault();
   }

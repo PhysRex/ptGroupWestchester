@@ -4,48 +4,48 @@
     -> https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters
 */
 
-
-.blur {
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+.img {
+  &.blur {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+  }
+  &.brightness {
+    -webkit-filter: brightness(250%);
+    filter: brightness(250%);
+  }
+  &.contrast {
+    -webkit-filter: contrast(180%);
+    filter: contrast(180%);
+  }
+  &.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  &.huerotate {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
+  &.invert {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+  &.opacity {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+  }
+  &.saturate {
+    -webkit-filter: saturate(7);
+    filter: saturate(7);
+  }
+  &.sepia {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+  }
+  &.shadow {
+    -webkit-filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
+    filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
+  }
 }
-.brightness {
-  -webkit-filter: brightness(250%);
-  filter: brightness(250%);
-}
-.contrast {
-  -webkit-filter: contrast(180%);
-  filter: contrast(180%);
-}
-.grayscale {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.huerotate {
-  -webkit-filter: hue-rotate(180deg);
-  filter: hue-rotate(180deg);
-}
-.invert {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-.opacity {
-  -webkit-filter: opacity(50%);
-  filter: opacity(50%);
-}
-.saturate {
-  -webkit-filter: saturate(7);
-  filter: saturate(7);
-}
-.sepia {
-  -webkit-filter: sepia(100%);
-  filter: sepia(100%);
-}
-.shadow {
-  -webkit-filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
-  filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
-}
-
 
 
 $bannerHeight: 102vh;
@@ -71,14 +71,42 @@ $bannerHeight: 102vh;
       // filter: grayscale(100%);
       // filter: blur(1px);
       // filter: sepia(100%);
-      filter: brightness(120%);
+      // filter: brightness(120%);
     }
   }
 }
+
+@mixin bannerBackgroundColor($colorName, $color) {
+  .banner-background-#{$colorName} {
+    position: relative;
+    // z-index: 1;
+    height: 40vh;
+    &::before {
+      height: 40vh;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color;
+      opacity: .8;
+      // filter: grayscale(100%);
+      // filter: blur(1px);
+      // filter: sepia(100%);
+      // filter: brightness(120%);
+    }
+  }
+}
+
+@include bannerBackgroundColor('bannerPrimary', $blueSapphire);
+@include bannerBackgroundColor('bannerSecondary', $tuscanTan);
+// @include bannerBackgroundColor('bannerPrime', $celestialBlue);
 
 
 @include bannerImage('dryBark');
 @include bannerImage('grayDryTrunk');
 @include bannerImage('beachSandWavesRock');
 @include bannerImage('beachSandWavy');
-@include bannerImage('mountainsRiveside');
+@include bannerImage('mountainsRiverside');

@@ -3,6 +3,9 @@
 @for $i from 0 through 20 {
   $value: 5 * $i;
   .padding- {
+    &#{$value} {
+      padding: $value + px;
+    }
     &top-#{$value} {
       padding-top: $value + px;
     }
@@ -25,6 +28,9 @@
     }
   }
   .f-padding- {
+    &#{$value} {
+      padding: $value + px !important;
+    }
     &top-#{$value} {
       padding-top: $value + px !important;
     }

@@ -1,9 +1,14 @@
-
+/**
+ * All margin style modifiers
+ */
 
 
 @for $i from 0 through 20 {
   $value: 5 * $i;
   .margin- {
+    &#{$value} {
+      margin: $value + px;
+    }
     &top-#{$value} {
       margin-top: $value + px;
     }
@@ -26,6 +31,9 @@
     }
   }
   .f-margin- {
+    &#{$value} {
+      margin: $value + px !important;
+    }
     &top-#{$value} {
       margin-top: $value + px !important;
     }

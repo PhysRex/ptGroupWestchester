@@ -4,14 +4,14 @@ import {
   Header,
  } from 'semantic-ui-react'
 
-const HeadBanner = ({ className, content, subheader }) => (
+const HeaderBanner = ({ className, content, subheader }) => (
   <Grid>
     <Grid.Column textAlign='center' className={className}>
       <Header
         textAlign='center'
         size='huge'
       >
-        <Header.Content className="text-white font-xl">{content}</Header.Content>
+        <h1 className="text-white margin-bottom-0 font-5rem">{content}</h1>
         <Header.Subheader className="f-text-white">{subheader}</Header.Subheader>
       </Header>
     </Grid.Column>
@@ -19,4 +19,4 @@ const HeadBanner = ({ className, content, subheader }) => (
 );
 
 
-export default HeadBanner;
+export default HeaderBanner;

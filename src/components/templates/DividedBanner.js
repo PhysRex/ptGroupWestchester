@@ -1,46 +1,55 @@
 import React from 'react';
 import { 
+  Container,
   Grid,
   Header,
   Image,
  } from 'semantic-ui-react';
 
- import { TextContent } from './'
+ import { TextContent } from './';
 
-
+/**
+ * Creates a mason-style image and text tiles
+ * @param {object} props The options to create the tiles
+ * @param {object} props.content Must have at least title, description and image details
+ * -> image should be an imported image in the component in which it's called
+ */
 const DividedBanner = ({ content }) => (
-  <Grid
-    // columns={12}
-    // columns={ content && (content.length || 1)}
-    divided
-    stackable
-    padded
-  >
-    <Grid.Row
-      centered
-      columns={4}
-      className="margin-bottom-10"
+  <Container>
+    <Grid
+      stackable
+      padded
     >
-      { content &&
-        content.map(({ title, description, image }, index) => 
-          <Grid.Column key={`${index}-${title}`}>
-            <Image
-              src={image}
-              rounded
-            />
-            <Header
-              textAlign='center'
-              content={title}
-            />
-            <TextContent
-              className="font-lg text-align-center"
-              content={description}
-            />
-          </Grid.Column>
-        )
-      }
-    </Grid.Row>
-  </Grid>
+      <Grid.Row
+        centered
+        columns={3}
+        className="margin-bottom-10"
+      >
+        { content &&
+          content.map(({ title, description, image }, index) => 
+            <Grid.Column
+              key={`${index}-${title}`}
+              className="f-margin-bottom-30"
+            >
+              <Image
+                src={image}
+                rounded
+                fluid
+              />
+              <Header
+                textAlign='center'
+                content={title}
+              />
+              <TextContent
+                className="font-lg text-align-center"
+                content={description}
+              />
+            </Grid.Column>
+          )
+        }
+      </Grid.Row>
+    </Grid>
+  </Container>
 );
 
 

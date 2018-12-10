@@ -1,16 +1,17 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
-import { HeadBanner, ContentBanner, DividedBanner } from '../templates';
+
+import { HeaderBanner, QuoteBanner, DividedBanner } from '../templates';
 
 
 const Staff = () => (
   <Container fluid>
-    <HeadBanner
-      className="banner-image-grayDryTrunk flex align-items-center justify-content-center"
+    <HeaderBanner
+      className="banner-background-bannerSecondary flex align-items-center justify-content-center"
       content='Staff'
-      subheader='staff description...'
+      subheader='Meet our amazing team of caring and experienced professionals'
     />
-    <ContentBanner
+    <QuoteBanner
       className="font-xl text-align-center margin-top-bottom-70"
       content='Our goal is to improve and maintain your overall health and to empower you with an understanding of your condition and wellness plan.'
     />

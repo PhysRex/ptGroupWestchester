@@ -6,6 +6,39 @@ $green: #0f0;
 $blue: #00f;
 $ruby-red: #AD141E;
 
+/* Color Pallettes */
+// https://coolors.co/b5f4f1-88d8e2-84d8ce-41a8a1-446fba
+$paleTurquoise: #B5F4F1;
+$middleBlue: #88D8E2;
+$middleBlueGreen: #84D8CE;
+$keppel: #41A8A1;
+$tuftsBlue: #446FBA;
+
+// https://coolors.co/fff0bf-46b58c-0a88aa-245b7f-535d66
+$blueMunsell: #0A88AA;
+$blueSapphire: #245B7F;
+
+// https://coolors.co/2f4858-33658a-a5c8c7-77a6b6-4d7298
+$pastelBlue: #A5C8C7;
+$moonstoneBlue: #77A6B6;
+$blueYonder: #4D7298;
+$tealBlue: #33658A;
+$darkSlateGray: #2F4858;
+
+// https://coolors.co/5494ca-856e75-005580-ab725a-93aac1
+$celestialBlue: #5494CA;
+$oldLavendar: #856E75;
+$darkCerulean: #005580;
+$tuscanTan: #AB725A;
+$pewterBlue: #93AAC1;
+
+/* Site Colors */
+$primaryColor: $middleBlueGreen;
+$primaryColorAlternate: $keppel;
+$secondaryColor: $tuscanTan;
+$tertiaryColor: $oldLavendar;
+
+
 .text- {
   &white { color: $white }
   &red { color: $red }
