@@ -14,7 +14,7 @@ console.log(Pages[ homePage])
 
 export const Routes = () => (
   <Switch>
-    <Route path='/' exact component={Pages[homePage]}/> // FIXME: not working because array no object
+    <Route path='/' exact component={Pages[homePage]}/> // FIXME: not working because array not an object
     {
       Pages.map((page) =>
         <Route
@@ -24,7 +24,7 @@ export const Routes = () => (
         />
       )
     }
-    <Route component={Pages[errorPage]}/> // FIXME: not working because array no object
+    <Route component={Pages[errorPage]}/> // FIXME: not working because array not an object
   </Switch>
 );
 
