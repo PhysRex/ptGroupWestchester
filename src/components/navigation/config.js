@@ -1,4 +1,5 @@
 import _ from 'lodash';
+
 import Pages from '../pages';
 
 const homePage = 'Home';
@@ -10,7 +11,7 @@ const pagesToOmitOnNavBar = [errorPage, 'Dashboard', 'Profile'];
 /**
  * @returns {array<JSX>} The page components in the React Router routes
  */
-function ComponentPagesForRoutes() {
+function getAllPageComponents() {
   return _.filter(Pages, ({ name }) => name !== pagesToOmitOnRoute);
 }
 
@@ -22,10 +23,23 @@ function MenuPagesForNavBar() {
   return _.without(pageNames, ...pagesToOmitOnNavBar);
 }
 
+const allPageComponents = getAllPageComponents();
+
+/**
+ * Retrieves a specified page component 
+ * @param {string} pageName The name of the page to retrieves
+ * @returns {JSX} A page component
+ */
+function getPageComponent(pageName) {
+  return allPageComponents.find(({name}) => name === pageName);
+}
+
 
 export {
   homePage,
   errorPage,
-  ComponentPagesForRoutes,
+  allPageComponents,
+  getPageComponent,
+  getAllPageComponents,
   MenuPagesForNavBar,
 }

@@ -1,6 +1,7 @@
 import WebFont from 'webfontloader';
-import Log from '../../utilities/logger/'
+
 import '../fonts/fonts.css';
+// import Log from '../../utilities/logger/'
 
 
 /**
@@ -27,26 +28,26 @@ WebFont.load({
     ],
   },
   loading: function() {
-    Log.trace('loading');
+    // Log.trace('loading');
   },
   inactive: function() {
-    Log.error('inactive');
+    // Log.error('inactive');
   },
   active: function() {
-    Log.trace('active');
+    // Log.trace('active');
     if (window.doc) {
-      Log.trace(' -> webfont active');
+      // Log.trace(' -> webfont active');
     } else {
-      Log.warn(' -> webfont active before app created');
+      // Log.warn(' -> webfont active before app created');
     }
   },
   fontloading: function() {
-    Log.trace('Font Loading');
+    // Log.trace('Font Loading');
   },
   fontinactive: function(family, fvd) {
-    Log.error(`Font Error ${family} ${fvd}`);
+    // Log.error(`Font Error ${family} ${fvd}`);
   },
   fontactive: function(family, fvd) {
-    Log.trace(`Font Loaded ${family} ${fvd}`);
+    // Log.trace(`Font Loaded ${family} ${fvd}`);
   }
 });

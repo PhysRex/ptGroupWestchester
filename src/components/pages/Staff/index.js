@@ -1,6 +1,6 @@
-import TestimonialsContainer from './TestimonialsContainer';
+import BiographyBanner from './BiographyBanner';
 
 
 export {
-  TestimonialsContainer,
+  BiographyBanner,
 };

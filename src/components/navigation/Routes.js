@@ -4,19 +4,19 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { homePage, errorPage, ComponentPagesForRoutes } from './config';
-
-
-const Pages = ComponentPagesForRoutes();
-console.log(Pages)
-console.log(Pages[ homePage])
+import {
+  homePage,
+  errorPage,
+  getPageComponent,
+  allPageComponents
+} from './config';
 
 
 export const Routes = () => (
   <Switch>
-    <Route path='/' exact component={Pages[homePage]}/> // FIXME: not working because array not an object
+    <Route path='/' exact component={getPageComponent(homePage)} />
     {
-      Pages.map((page) =>
+      allPageComponents.map((page) =>
         <Route
           key={page.name}
           path={`/${page.name}`}
@@ -24,7 +24,7 @@ export const Routes = () => (
         />
       )
     }
-    <Route component={Pages[errorPage]}/> // FIXME: not working because array not an object
+    <Route component={getPageComponent(errorPage)} />
   </Switch>
 );
 

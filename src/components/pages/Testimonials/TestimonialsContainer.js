@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Card } from 'semantic-ui-react'
 
-const shortenPhrase = (phrase, numberToKeep = 3) => phrase.split(' ').splice(0,numberToKeep).join(' ') + '...';
+const shortenPhrase = (phrase, wordsToKeep = 3) => phrase.split(' ').splice(0,wordsToKeep).join(' ') + '...';
 
 export const TestimonialsContainer = ({ content }) => (
   <Container
