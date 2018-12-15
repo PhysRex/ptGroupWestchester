@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
-import { HeadBanner } from '../templates';
+import { HeaderBanner } from '../templates';
 
 const ErrorPage = () => (
   <Container fluid>
-    <HeadBanner
-      content='Error Page'
-      subheader='A witty error message, hopefully'
+    <HeaderBanner
+      className="banner-background-bannerSecondary flex align-items-center justify-content-center"
+      content='Error'
+      subheader="Somehow we can't find what you're looking for ¯\_(ツ)_/¯"
     />
   </Container>
 );
