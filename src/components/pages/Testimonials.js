@@ -14,12 +14,6 @@ const testimonials = [
     author: 'JJ',
   },
   {
-    title: 'Amazing',
-    message: 'a great experience',
-    author: 'MC',
-    year: '2015',
-  },
-  {
     message: 'Very competent, extremely professional, excellent diagnosis to pin point exact problem and always successful with treatment and recommended followup exercises. The very best in physical therapy.',
     author: 'RS',
   },

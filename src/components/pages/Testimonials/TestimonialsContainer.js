@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Grid, Card } from 'semantic-ui-react'
+import { Container, Grid, Card, Icon } from 'semantic-ui-react'
 
 const shortenPhrase = (phrase, wordsToKeep = 3) => phrase.split(' ').splice(0,wordsToKeep).join(' ') + '...';
 
 export const TestimonialsContainer = ({ content }) => (
   <Container
-    className="margin-20 text-shadow-none"
+    className="margin-20"
   >
     <Grid
       stackable
@@ -37,8 +37,7 @@ export const TestimonialsContainer = ({ content }) => (
                   <Card.Description>{message}</Card.Description>
                 </Card.Content>
                 <Card.Content extra textAlign='right'>
-                  {/* <Icon name='user' /> */}
-                  Comment by {author}
+                  Comment by <Icon name='user' className="margin-left-10"/> {author}
                 </Card.Content>
               </Card>
             </Grid.Column>
