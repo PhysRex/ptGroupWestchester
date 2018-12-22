@@ -1,0 +1,18 @@
+
+.bg- {
+  &primary { background-color: $primaryColor; }
+  &primaryAlternate { background-color: $primaryColorAlternate; }
+  &secondary { background-color: $secondaryColor; }
+  &tertiary { background-color: $tertiaryColor; }
+  &celestialBlue { background-color: $celestialBlue; }
+}
+
+
+.f-bg- {
+  &primary { background-color: $primaryColor !important; }
+  &primaryAlternate { background-color: $primaryColorAlternate !important; }
+  &secondary { background-color: $secondaryColor !important; }
+  &tertiary { background-color: $tertiaryColor !important; }
+  &celestialBlue { background-color: $celestialBlue !important; }
+}
+

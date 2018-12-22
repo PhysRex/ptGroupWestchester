@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'semantic-ui-react'
 
 import { HeadBanner, QuoteBanner, DividedBanner } from '../templates';
+import { HoursAndDirections } from './Home/'
 import {
   practiceOutside,
   practiceAerialView,
