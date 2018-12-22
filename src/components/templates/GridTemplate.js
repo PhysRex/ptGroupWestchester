@@ -13,9 +13,9 @@ const left = {
   computer: 5,
 }
 const right = {
-  mobile: 10,
-  tablet: 7,
-  computer: 5,
+  mobile: 9,
+  tablet: 8,
+  computer: 7,
 }
 
 export const GridTemplate = () => (
@@ -25,15 +25,15 @@ export const GridTemplate = () => (
         className="margin-bottom-10"
         // textAlign='left'
       >
-        <Grid.Column className="blue-border" mobile={10} tablet={7} computer={5}>
-          <Responsive {...Responsive.onlyMobile}>onlyMobile: 10</Responsive>
-          <Responsive {...Responsive.onlyTablet}>onlyTablet: 7</Responsive>
-          <Responsive {...Responsive.onlyComputer}>onlyComputer: 5</Responsive>
+        <Grid.Column className="blue-border" mobile={left.mobile} tablet={left.tablet} computer={left.computer}>
+          <Responsive {...Responsive.onlyMobile}>onlyMobile: {left.mobile}</Responsive>
+          <Responsive {...Responsive.onlyTablet}>onlyTablet: {left.tablet}</Responsive>
+          <Responsive {...Responsive.onlyComputer}>onlyComputer: {left.computer}</Responsive>
         </Grid.Column>
-        <Grid.Column className="blue-border" mobile={9} tablet={8} computer={7}>
-          <Responsive {...Responsive.onlyMobile}>onlyMobile: 9</Responsive>
-          <Responsive {...Responsive.onlyTablet}>onlyTablet: 8</Responsive>
-          <Responsive {...Responsive.onlyComputer}>onlyComputer: 7</Responsive>
+        <Grid.Column className="blue-border" mobile={right.mobile} tablet={right.tablet} computer={right.computer}>
+          <Responsive {...Responsive.onlyMobile}>onlyMobile: {right.mobile}</Responsive>
+          <Responsive {...Responsive.onlyTablet}>onlyTablet: {right.tablet}</Responsive>
+          <Responsive {...Responsive.onlyComputer}>onlyComputer: {right.computer}</Responsive>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row className="margin-bottom-10" columns={setColumns}>

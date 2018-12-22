@@ -13,6 +13,7 @@ const DownloadLink = ({ text, contentToDownload, className }) => (
     className={className}
     href={contentToDownload}
     target='_blank'
+    rel="noopener noreferrer"
     download
   >
     {text}

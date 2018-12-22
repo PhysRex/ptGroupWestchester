@@ -1,7 +1,6 @@
-import _ from 'lodash';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { Grid, Menu, Icon } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 
 import { homePage, MenuPagesForNavBar } from './config';
 
