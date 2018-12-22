@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Responsive,
   Container,
   Grid,
   Card,
@@ -8,7 +7,6 @@ import {
   Header,
   Label
 } from 'semantic-ui-react'
-import { GridTemplate } from '../../templates'
 
 /**
  * A banner element to display a list of staff bios
