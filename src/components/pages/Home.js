@@ -49,6 +49,7 @@ const Home = (props) => (
       content='Our goal is to improve and maintain your overall health and to empower you with an understanding of your condition and wellness plan.'
     />
     <DividedBanner content={bannerContent} />
+    <HoursAndDirections />
   </Container>
 );
 

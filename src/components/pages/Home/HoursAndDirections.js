@@ -3,47 +3,87 @@ import {
   Container,
   Grid,
   Card,
-  Image,
+  Divider,
   Header,
   Label
 } from 'semantic-ui-react'
+
+const hours = [
+  {
+    day: 'Monday',
+    open: '7AM',
+    close: '7PM',
+  },
+  {
+    day: 'Tuesday',
+    open: '7AM',
+    close: '7PM',
+  },
+  {
+    day: 'Wednesday',
+    open: '7AM',
+    close: '7PM',
+  },
+  {
+    day: 'Thursday',
+    open: '7AM',
+    close: '7PM',
+  },
+  {
+    day: 'Friday',
+    open: '7AM',
+    close: '7PM',
+  },
+  {
+    day: 'Saturday',
+    isClosed: true,
+  },
+  {
+    day: 'Sunday',
+    isClosed: true,
+  },
+];
 
 /**
  * A banner element to display a list of staff bios
  * @param {Object[]} props.content A list of staff bios to display
  * @returns {JSX} The rendered ReactJS component
  */
-export const HoursAndDirections = ({ content }) => (
-  <Container
-    className="margin-40"
-  >
-    <Grid
-      stackable
-      centered
-    >
-      { content &&
-        content.map(({ name, degrees, role, description, quote, image }) => 
-          <Grid.Row key={name} className="margin-bottom-40">
-            <Grid.Column verticalAlign='middle' mobile={12} tablet={9} computer={7}>
-              <Card fluid className="no-border f-box-shadow-pale-transition">
-                <Image src={image} />
-              </Card>
-            </Grid.Column>
-            <Grid.Column mobile={12} tablet={7} computer={6}>
-              <Header as='h2'>
-                {name}
-                <Header.Subheader>
-                  {role} 
-                </Header.Subheader>
-                <Label content={degrees} size='tiny' className="f-margin-left-0"/>
-              </Header>
-              <p className='font-lgr'>{description}</p>
-              <p className='font-xl-less font-weight-800'>&quot;{quote}&quot;</p>
-            </Grid.Column>
-          </Grid.Row>
-        )
-      }
-    </Grid>
+export const HoursAndDirections = () => (
+  <Container className="margin-40 bg-secondary" fluid>
+    <Container>
+      <Grid
+        stackable
+      >
+        <Grid.Row className="margin-bottom-40" columns={2}>
+          <Grid.Column
+            // mobile={12} tablet={7} computer={6}
+            >
+            <Header as='h2' textAlign='center' className="f-text-white">
+              Office Hours
+              <Header.Subheader>
+                Call us anytime 
+              </Header.Subheader>
+            </Header>
+          </Grid.Column>
+
+          <Grid.Column verticalAlign='middle'
+            // mobile={12} tablet={9} computer={7}
+            >
+            <Header as='h2' textAlign='center'>
+              Location
+              <Header.Subheader>
+                Convenient located minutes from mayor highways and public transit
+              </Header.Subheader>
+            </Header>
+            <Card fluid className="no-border f-box-shadow-pale-transition">
+              Directions
+            </Card>
+          </Grid.Column>
+
+        </Grid.Row>
+      </Grid>
+    </Container>
   </Container>
 );
 
