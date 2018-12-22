@@ -19,6 +19,12 @@
   &lgr {
     font-size: 1.25rem;
   }
+  &lgst {
+    font-size: 1.5rem;
+  }
+  &xl-less {
+    font-size: 1.75rem;
+  }
   &xl {
     font-size: 2rem;
   }
@@ -49,6 +55,17 @@
   &10rem {
     font-size: 10rem;
   }
+}
+
+.font-weight- {
+  &100 { font-weight: 100;}
+  &200 { font-weight: 200;}
+  &300 { font-weight: 300;}
+  &400 { font-weight: 400;}
+  &500 { font-weight: 500;}
+  &600 { font-weight: 600;}
+  &700 { font-weight: 700;}
+  &800 { font-weight: 800;}
 }
 
 .text-align- {

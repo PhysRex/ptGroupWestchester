@@ -8,6 +8,7 @@ import DividedBanner from './DividedBanner';
 import TextContent from './TextContent';
 import Login from './Login';
 import DownloadLink from './DownloadLink';
+import GridTemplate from './GridTemplate';
 
 
 export {
@@ -21,4 +22,5 @@ export {
   TextContent,
   Login,
   DownloadLink,
+  GridTemplate,
 }

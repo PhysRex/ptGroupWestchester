@@ -1,53 +1,53 @@
 import React from 'react';
-import { Container, Grid, Card } from 'semantic-ui-react'
+import {
+  Responsive,
+  Container,
+  Grid,
+  Card,
+  Image,
+  Header,
+  Label
+} from 'semantic-ui-react'
+import { GridTemplate } from '../../templates'
 
-const shortenPhrase = (phrase, numberToKeep = 3) => phrase.split(' ').splice(0,numberToKeep).join(' ') + '...';
-
-export const TestimonialsContainer = ({ content }) => (
+/**
+ * A banner element to display a list of staff bios
+ * @param {Object[]} props.content A list of staff bios to display
+ * @returns {JSX} The rendered ReactJS component
+ */
+export const BiographyBanner = ({ content }) => (
   <Container
-    className="margin-20 text-shadow-none"
+    className="margin-40"
   >
     <Grid
       stackable
       centered
     >
-      <Grid.Row
-        centered
-        columns={3}
-        // className="margin-20"
-      >
-        { content &&
-          content.map(({ title, message, author, year, special }, index) => 
-            <Grid.Column
-              key={`${index}-${title}`}
-              className="f-margin-bottom-30"
-              // mobile={6} desktop={3}
-              width={special && 6}
-            >
-              <Card
-                fluid
-                // raised
-                className="no-border f-box-shadow-pale-transition"
-              >
-                <Card.Content textAlign='center'>
-                  <Card.Header>{title || shortenPhrase(message, 3)}</Card.Header>
-                  <Card.Meta>
-                    <span className='date'>Joined in {year}</span>
-                  </Card.Meta>
-                  <Card.Description>{message}</Card.Description>
-                </Card.Content>
-                <Card.Content extra textAlign='right'>
-                  {/* <Icon name='user' /> */}
-                  Comment by {author}
-                </Card.Content>
+      { content &&
+        content.map(({ name, degrees, role, description, quote, image }) => 
+          <Grid.Row key={name} className="margin-bottom-40">
+            <Grid.Column verticalAlign='middle' mobile={12} tablet={9} computer={7}>
+              <Card fluid className="no-border f-box-shadow-pale-transition">
+                <Image src={image} />
               </Card>
             </Grid.Column>
-          )
-        }
-      </Grid.Row>
+            <Grid.Column mobile={12} tablet={7} computer={6}>
+              <Header as='h2'>
+                {name}
+                <Header.Subheader>
+                  {role} 
+                </Header.Subheader>
+                <Label content={degrees} size='tiny' className="f-margin-left-0"/>
+              </Header>
+              <p className='font-lgr'>{description}</p>
+              <p className='font-xl-less font-weight-800'>&quot;{quote}&quot;</p>
+            </Grid.Column>
+          </Grid.Row>
+        )
+      }
     </Grid>
   </Container>
 );
 
 
-export default TestimonialsContainer;
+export default BiographyBanner;
