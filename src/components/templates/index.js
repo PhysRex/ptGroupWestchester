@@ -9,6 +9,7 @@ import TextContent from './TextContent';
 import Login from './Login';
 import DownloadLink from './DownloadLink';
 import GridTemplate from './GridTemplate';
+import Footer from './Footer';
 
 
 export {
@@ -23,4 +24,5 @@ export {
   Login,
   DownloadLink,
   GridTemplate,
+  Footer,
 }

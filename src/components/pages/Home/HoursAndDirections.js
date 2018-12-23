@@ -3,10 +3,8 @@ import {
   Container,
   Grid,
   Card,
-  Divider,
   Header,
-  Label
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
 
 const hours = [
   {
@@ -50,26 +48,31 @@ const hours = [
  * @returns {JSX} The rendered ReactJS component
  */
 export const HoursAndDirections = () => (
-  <Container className="margin-40 bg-secondary" fluid>
-    <Container>
-      <Grid
-        stackable
-      >
-        <Grid.Row className="margin-bottom-40" columns={2}>
-          <Grid.Column
-            // mobile={12} tablet={7} computer={6}
-            >
+  <Grid className="bg-secondary">
+    <Container className="margin-40">
+      <Grid stackable>
+        <Grid.Row className="">
+
+          <Grid.Column mobile={16} tablet={6} computer={6}>
             <Header as='h2' textAlign='center' className="f-text-white">
               Office Hours
               <Header.Subheader>
                 Call us anytime 
               </Header.Subheader>
             </Header>
+            <Grid padded='horizontally' className="f-margin-top-10">
+            {
+              hours.map(({day, open, close, isClosed}) => 
+                <Grid.Row key={day} columns={2} className="f-padding-top-bottom-5 font-lgr">
+                  <Grid.Column textAlign='right'>{day}</Grid.Column>
+                  <Grid.Column textAlign='left'>{isClosed ? 'Closed' : `${open} - ${close}`}</Grid.Column>
+                </Grid.Row>
+              )
+            }
+            </Grid>
           </Grid.Column>
 
-          <Grid.Column verticalAlign='middle'
-            // mobile={12} tablet={9} computer={7}
-            >
+          <Grid.Column verticalAlign='middle' mobile={16} tablet={10} computer={10}>
             <Header as='h2' textAlign='center'>
               Location
               <Header.Subheader>
@@ -84,7 +87,7 @@ export const HoursAndDirections = () => (
         </Grid.Row>
       </Grid>
     </Container>
-  </Container>
+  </Grid>
 );
 
 

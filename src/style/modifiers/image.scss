@@ -91,7 +91,7 @@ $bannerHeight: 102vh;
       left: 0;
       right: 0;
       background-color: $color;
-      opacity: .8;
+      // opacity: .8;
       // filter: grayscale(100%);
       // filter: blur(1px);
       // filter: sepia(100%);
@@ -100,8 +100,8 @@ $bannerHeight: 102vh;
   }
 }
 
-@include bannerBackgroundColor('bannerPrimary', $blueSapphire);
-@include bannerBackgroundColor('bannerSecondary', $tuscanTan);
+@include bannerBackgroundColor('bannerPrimary', $primaryColor);
+@include bannerBackgroundColor('bannerSecondary', $secondaryColor);
 // @include bannerBackgroundColor('bannerPrime', $celestialBlue);
 
 

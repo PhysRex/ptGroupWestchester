@@ -50,6 +50,10 @@ const Home = (props) => (
     />
     <DividedBanner content={bannerContent} />
     <HoursAndDirections />
+    <QuoteBanner
+      className="font-xl text-align-center margin-top-bottom-70"
+      content='You will receive Innovative Physical Therapy services directed to the treatment and prevention of sports injuries, repetitive strain disorders and conditions involving bone, joint and soft tissue.'
+    />
   </Container>
 );
 
