@@ -1,3 +1,4 @@
+// import NavBar from './NavBar';
 import Page from './Page';
 import Board from './Board';
 import PiecesContainer from './PiecesContainer';
@@ -13,6 +14,7 @@ import Footer from './Footer';
 
 
 export {
+  // NavBar,
   Page,
   Board,
   PiecesContainer,

@@ -5,16 +5,16 @@ import {
   Header,
 } from 'semantic-ui-react';
 
-
 /**
  * A generalized footer component
  * @returns {JSX} The rendered ReactJS component
  */
+
 export const Footer = () => (
-  <Grid className="bg-primary">
+  <Grid className="bg-primary" centered>
     <Container className="margin-20">
       <Grid stackable>
-        <Grid.Row className="" columns={1}>
+        <Grid.Row className="" columns="equal">
           <Grid.Column mobile={16} tablet={16} computer={16}>
             <Header as='h2' textAlign='center' className="">
               Footer component
