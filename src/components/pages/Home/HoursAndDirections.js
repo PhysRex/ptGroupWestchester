@@ -42,6 +42,7 @@ const hours = [
   },
 ];
 
+
 /**
  * A banner element to display a list of staff bios
  * @param {Object[]} props.content A list of staff bios to display
@@ -85,6 +86,10 @@ export const HoursAndDirections = () => (
           </Grid.Column>
 
         </Grid.Row>
+
+
+
+
       </Grid>
     </Container>
   </Grid>

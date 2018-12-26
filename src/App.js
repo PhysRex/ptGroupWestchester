@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {/* <NavBar fixedNavLocation='top' /> */}
+          <NavBar fixedNavLocation='top' />
           <Routes />
           <Footer />
         </div>
