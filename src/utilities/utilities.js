@@ -17,7 +17,7 @@ function formatDate(date, options = defaultDateOptions) {
   return new Date(date).toLocaleDateString('en-US', options);
 }
 
-scrollToBottom = () => { // TODO: make more 'react'-like
+const scrollToBottom = () => { // TODO: make more 'react'-like
   const chatDisplay = document.getElementById('chatDisplay');
   // this.messagesEnd.scrollIntoView({ behavior: "smooth" });
   chatDisplay.scrollTop = chatDisplay.scrollHeight;
@@ -25,7 +25,13 @@ scrollToBottom = () => { // TODO: make more 'react'-like
   console.log('  >> scroll height: ', chatDisplay.scrollHeight);
 }
 
+function convertObjToUrlParams(obj) {
+  return Object.entries(obj).map(
+    ([key, val]) => `${key}=${encodeURIComponent(val)}`
+  ).join('&');
+}
 
 export {
   formatDate,
+  convertObjToUrlParams,
 };
