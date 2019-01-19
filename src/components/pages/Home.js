@@ -40,9 +40,9 @@ const bannerContent = [
 const Home = (props) => (
   <Container fluid>
     <HeadBanner
-      className="banner-image-dryBark flex align-items-center justify-content-center"
-      content='Home'
-      subheader='A brief description of the game, possibly rules'
+      className="banner-image-dryBark flex align-items-center justify-content-center text-shadow-default"
+      content='Physical Therapy Group of Westchester'
+      subheader='We take pride in our ability to provide one-on-one exceptional care by the most qualified, experienced and licensed physical therapists throughout your entire course of treatment.'
     />
     <QuoteBanner
       className="font-xl text-align-center margin-top-bottom-70"

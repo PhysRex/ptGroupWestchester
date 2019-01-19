@@ -138,16 +138,38 @@ const testimonials = [
     author: 'SG',
   },
 ];
+const testimonials2 = [
+  {
+    message: 'I\'m graduating! I walked in here in pain and now I\'m walking out pain-free.',
+    author: 'TG',
+  },
+  {
+    message: 'I feel my balance is better and I am not afraid of falling or walking up or down stairs.',
+    author: 'DL',
+  },
+  {
+    message: 'My ankle is much better since receiving physical therapy services and I have returned to my job at full capacity.',
+    author: 'HA',
+  },
+  {
+    message: 'I am able to sleep at night without any back or hip pain.',
+    author: 'EB',
+  },
+  {
+    message: 'I am back playing tennis without shoulder pain or weakness.',
+    author: 'SG',
+  },
+];
 
 const Testimonials = () => (
   <Container fluid>
     <HeaderBanner
       className="banner-background-bannerPrimary flex align-items-center justify-content-center"
-      content='Testimonials'
+      content='hi!!'
       subheader='We strive to make true and lasting relationships with every patient'
     />
     <TestimonialsContainer
-      content={testimonials}
+      content={testimonials2}
     />
   </Container>
 );

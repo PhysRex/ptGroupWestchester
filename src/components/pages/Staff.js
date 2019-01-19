@@ -46,7 +46,7 @@ const bioContent = [
     quote: 'My aim is to connect with every patient in a real and authentic way',
     image: doctorGeneric,
   },
-]
+];
 
 
 const Staff = () => (

@@ -1,0 +1,50 @@
+
+.position- {
+  &fixed {
+    position: fixed;
+  }
+  &absolute {
+    position: absolute;
+  }
+}
+
+// creates z-index classes in increments of 5
+@for $i from 0 through 100 {
+  $value: 5 * $i;
+  .z-index- {
+    &#{$value} {
+      z-index: $value;
+    }
+  }
+  .f-z-index- {
+    &#{$value} {
+      z-index: $value !important;
+    }
+  }
+}
+
+// creates position classes in increments of 1
+@for $i from 0 through 1000 {
+  $value: $i;
+  .top- {
+    &#{$value} {
+      top: $value + px;
+    }
+  }
+  .bottom- {
+    &#{$value} {
+      bottom: $value + px;
+    }
+  }
+  .left- {
+    &#{$value} {
+      left: $value + px;
+    }
+  }
+  .right- {
+    &#{$value} {
+      right: $value + px;
+    }
+  }
+}
+
