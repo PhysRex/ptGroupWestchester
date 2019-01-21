@@ -7,6 +7,7 @@ import DividedBanner from './DividedBanner';
 import TextContent from './TextContent';
 import Login from './Login';
 import DownloadLink from './DownloadLink';
+import ServiceBanner from './ServiceBanner';
 
 
 export {
@@ -19,4 +20,5 @@ export {
   TextContent,
   Login,
   DownloadLink,
+  ServiceBanner,
 }
