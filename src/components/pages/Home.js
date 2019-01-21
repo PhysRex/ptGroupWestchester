@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
 
-import { HeadBanner, ContentBanner, DividedBanner } from '../templates';
+import { HeadBanner, ContentBanner, DividedBanner, ServiceBanner } from '../templates';
 import {
   practiceOutside,
   practiceAerialView,
@@ -26,12 +26,69 @@ const bannerContent = [
   },
 ];
 
+const serviceContent = [ 
+  {
+    category: 'cat1',
+    services: [
+      "Cervical spine",
+      "Frozen shoulder",
+      "Sprains / strains",
+      "Pre- and post operative rehabilitation",
+      "ACL reconstruction",
+      "Ankle tendonitis / repairs",
+      "Tendonitis/Bursitis",
+      "Plantar fascitis",
+    ]
+  },
+  {
+    category: 'cat2',
+    services: [
+      "Bunionectomy",
+      "Tennis elbow",
+      "Carpal tunnel syndrome",
+      "Balance and gait disorders",
+      "Neck pain",
+      "Chronic Pain Syndrome",
+      "Sports-related injuries",
+    ]
+  },
+  {
+    category: 'cat3',
+    services: [
+      "Fall prevention",
+      "Myofascial pain syndromes",
+      "TMJ dysfunction",
+      "Brachial plexus injuries",
+      "Sports-related injuries and sports-specific training and conditioning",
+      "Neurological disorders including Multiple Sclerosis, Parkinson's and post CVA",
+      "Pre and post natal dysfunction",
+      "Post Mastectomy",
+    ]
+  },
+  {
+    category: 'cat4',
+    services: [
+      "Work-related injuries",
+      "Arthritis",
+      "Back pain",
+      "Osteoporosis / Osteopenia",
+      "Scoliosis",
+      "Rotator cuff disorders / repairs",
+      "Vestibular Rehabilitation Therapy",
+      "Vertigo",
+    ]
+  },
+]
+
 const Home = (props) => (
   <Container fluid>
     <HeadBanner
       className="banner-image-dryBark flex align-items-center justify-content-center"
       content='Home'
       subheader='A brief description of the game, possibly rules'
+    />
+    <ServiceBanner
+      content={serviceContent}
     />
     <ContentBanner
       className="font-xl text-align-center margin-top-bottom-70"
