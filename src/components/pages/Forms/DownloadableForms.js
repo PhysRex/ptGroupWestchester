@@ -8,7 +8,7 @@ const DownloadableForms = ({ formsToDisplay }) => {
     <List>
     {
       formsToDisplay.map(({ pdf, name }) => 
-        <List.Item>
+        <List.Item key={name}>
           <DownloadLink contentToDownload={pdf} text={name} />
         </List.Item>
       )
