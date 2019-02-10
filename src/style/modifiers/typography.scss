@@ -37,23 +37,10 @@
   &xxlr {
     font-size: 3.5rem;
   }
-  &5rem {
-    font-size: 5rem;
-  }
-  &6rem {
-    font-size: 6rem;
-  }
-  &7rem {
-    font-size: 7rem;
-  }
-  &8rem {
-    font-size: 8rem;
-  }
-  &9rem {
-    font-size: 9rem;
-  }
-  &10rem {
-    font-size: 10rem;
+  @for $i from 1 through 20 {
+    &#{$i}rem {
+      font-size: $i + rem;
+    }
   }
 }
 

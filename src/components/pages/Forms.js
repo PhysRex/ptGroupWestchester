@@ -4,29 +4,10 @@ import {
   HeaderBanner,
   QuoteBanner,
   DividedBanner,
-  DownloadLink,
 } from '../templates';
 import DownloadableForms from './Forms/DownloadableForms'
+import { listOfForms } from '../../copy';
 
-import pdf from '../../assets/documents/N_P Packet.pdf'
-
-const listOfForms = [
-  {
-    name: 'medical history',
-    downloadLink: pdf,
-    description: 'A form to provide your medical history'
-  },
-  {
-    name: 'Personal Information',
-    downloadLink: pdf,
-    description: 'A form to provide your personal history'
-  },
-  {
-    name: 'other stuff',
-    downloadLink: pdf,
-    description: 'A form to provide your other stuff'
-  }
-];
 
 const Forms = () => (
   <Container fluid>
@@ -39,10 +20,7 @@ const Forms = () => (
       className="font-xl text-align-center margin-top-bottom-70"
       content='Our goal is to improve and maintain your overall health and to empower you with an understanding of your condition and wellness plan.'
     />
-    <DownloadableForms 
-      formsToDisplay={listOfForms}
-    />
-    <DownloadLink contentToDownload={pdf} text="download this content..." />
+    <DownloadableForms formsToDisplay={listOfForms} />
     <DividedBanner />
   </Container>
 );

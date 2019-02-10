@@ -33,5 +33,6 @@ function convertObjToUrlParams(obj) {
 
 export {
   formatDate,
+  scrollToBottom,
   convertObjToUrlParams,
 };

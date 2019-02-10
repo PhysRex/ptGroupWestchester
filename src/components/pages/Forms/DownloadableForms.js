@@ -1,14 +1,16 @@
 import React from 'react';
-import { List } from 'semantic-ui-react'
+import { List } from 'semantic-ui-react';
+import { DownloadLink } from '../../templates';
 
 
-const DownloadableForms = (props) => {
-  console.log(props);
+const DownloadableForms = ({ formsToDisplay }) => {
   return (
     <List>
     {
-      props.formsToDisplay.map(form => 
-        <List.Item>{form.name}</List.Item>
+      formsToDisplay.map(({ pdf, name }) => 
+        <List.Item>
+          <DownloadLink contentToDownload={pdf} text={name} />
+        </List.Item>
       )
     }
     </List>

@@ -1,23 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import {
   Responsive,
-  Menu,
   Icon,
 } from 'semantic-ui-react';
 
-import { homePage, menuPagesForNavBar } from '../config';
+import { homePage } from '../config';
 import { NavMobile, NavDesktop } from './';
-
-/**
- * @param {string} current The current route (current state.activeItem also)
- * @param {string} menuItem THe menu item to check against 
- * @returns {boolean} True if current route (url pathname) matches Navbar item
- */
-const isActive = (current, page) => {
-  if (current === '/' && page === homePage) return true;
-  return current === page || current === `/${page}`;
-};
 
 
 export default class NavBar extends Component {
