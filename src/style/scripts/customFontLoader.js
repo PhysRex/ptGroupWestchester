@@ -10,7 +10,18 @@ import '../fonts/fonts.css';
  */
 WebFont.load({
   google: {
-    families: ['Titillium Web:300,400,700'],
+    families: [
+      'Titillium Web:300,400,700',
+      'Alegreya SC:300,400,700',
+      'Cinzel Decorative:300,400,700',
+      'Playfair Display SC:300,400,700',
+      'Quattrocento:300,400,700',
+      'Ultra:300,400,700',
+      'Merriweather:300,400,700',
+      'Sofia:300,400,700',
+      'Rouge Script:300,400,700',
+      'Oleo Script Swash Caps:300,400,700',
+    ]
   },
   custom: {
     families: [

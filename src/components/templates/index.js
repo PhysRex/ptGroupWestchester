@@ -1,4 +1,3 @@
-// import NavBar from './NavBar';
 import Page from './Page';
 import Board from './Board';
 import PiecesContainer from './PiecesContainer';
@@ -11,10 +10,10 @@ import Login from './Login';
 import DownloadLink from './DownloadLink';
 import GridTemplate from './GridTemplate';
 import Footer from './Footer';
+import Logo from './Logo';
 
 
 export {
-  // NavBar,
   Page,
   Board,
   PiecesContainer,
@@ -27,4 +26,5 @@ export {
   DownloadLink,
   GridTemplate,
   Footer,
+  Logo,
 }

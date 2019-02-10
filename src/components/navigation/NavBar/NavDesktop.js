@@ -24,7 +24,7 @@ export const NavDesktop = (props) => (
           name='dna'
           size='large'
         />
-        <span className="font-lgr">
+        <span className="font-lgr font-special ">
           Physical Therapy Group of Westchester
         </span>
       </div>

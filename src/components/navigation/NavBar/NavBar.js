@@ -64,6 +64,7 @@ export default class NavBar extends Component {
     const { isNavVisible } = this.state;
     return (
       <div>
+      
         <Responsive {...Responsive.onlyMobile}>
           <NavMobile
             fixedNavLocation={this.props.fixedNavLocation}
@@ -81,6 +82,7 @@ export default class NavBar extends Component {
             { this.props.children }
           </NavMobile>
         </Responsive>
+
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <NavDesktop
             fixedNavLocation={this.props.fixedNavLocation}
@@ -90,6 +92,7 @@ export default class NavBar extends Component {
           />
           { this.props.children }
         </Responsive>
+
       </div>
     )
   }
