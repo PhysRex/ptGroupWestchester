@@ -52,7 +52,7 @@ $bannerHeight: 102vh;
 @mixin bannerImage($imageName) {
   .banner-image-#{$imageName} {
     position: relative;
-    // z-index: 1;
+    z-index: 1;
     height: $bannerHeight;
     &::before {
       background-image: url('./assets/images/' + $imageName + '.jpg') !important;
@@ -70,8 +70,15 @@ $bannerHeight: 102vh;
       // opacity: .4;
       // filter: grayscale(100%);
       // filter: blur(1px);
-      // filter: sepia(100%);
-      // filter: brightness(120%);
+      filter: sepia(40%);
+      // filter: brightness(100%);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .banner-image-#{$imageName} {
+      &::before {
+        background-position: right -40px bottom 0px;
+      }
     }
   }
 }
@@ -106,8 +113,12 @@ $bannerHeight: 102vh;
 // @include bannerBackgroundColor('bannerPrime', $celestialBlue);
 
 
-@include bannerImage('dryBark');
-@include bannerImage('grayDryTrunk');
-@include bannerImage('beachSandWavesRock');
-@include bannerImage('beachSandWavy');
-@include bannerImage('mountainsRiverside');
+@include bannerImage('dry-bark');
+@include bannerImage('father-holding-child-beach');
+@include bannerImage('hiking-couple');
+@include bannerImage('parents-daughter-beach');
+@include bannerImage('parents-at-mountaintop');
+@include bannerImage('gray-dry-trunk');
+@include bannerImage('beach-sand-waves-rock');
+@include bannerImage('beach-sand-wavy');
+@include bannerImage('mountains-riverside');

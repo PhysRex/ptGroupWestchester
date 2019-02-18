@@ -1,7 +1,7 @@
 import Page from './Page';
 import Board from './Board';
 import PiecesContainer from './PiecesContainer';
-import HeadBanner from './HeadBanner';
+import HeaderImageBanner from './HeaderImageBanner';
 import HeaderBanner from './HeaderBanner';
 import QuoteBanner from './QuoteBanner';
 import DividedBanner from './DividedBanner';
@@ -17,7 +17,7 @@ export {
   Page,
   Board,
   PiecesContainer,
-  HeadBanner,
+  HeaderImageBanner,
   HeaderBanner,
   QuoteBanner,
   DividedBanner,

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
-import { HeadBanner } from './';
+import { HeaderImageBanner } from './';
 
 /**
  * This component serves as a template for all Pages
  */
 const Page = () => (
   <Container fluid>
-    <HeadBanner
+    <HeaderImageBanner
       content='Page Template'
       subheader='This page serves as a template for all pages'
     />

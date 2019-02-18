@@ -1,0 +1,95 @@
+
+@for $i from 1 through 100 {
+  $value: 5 * $i;
+  .height- {
+    &#{$value} {
+      height: $value + px;
+    }
+  }
+  .width- {
+    &#{$value} {
+      width: $value + px;
+    }
+  }
+  .min-height- {
+    &#{$value} {
+      min-height: $value + px;
+    }
+  }
+  .min-width- {
+    &#{$value} {
+      min-width: $value + px;
+    }
+  }
+  .max-height- {
+    &#{$value} {
+      max-height: $value + px;
+    }
+  }
+  .max-width- {
+    &#{$value} {
+      max-width: $value + px;
+    }
+  }
+  
+  .height- {
+    &#{$value}vh {
+      height: $value + vh;
+    }
+  }
+  .width- {
+    &#{$value}vw {
+      width: $value + vw;
+    }
+  }
+  .min-height- {
+    &#{$value}vh {
+      min-height: $value vh;
+    }
+  }
+  .min-width- {
+    &#{$value}vw {
+      min-width: $value vw;
+    }
+  }
+  .max-height- {
+    &#{$value}vh {
+      max-height: $value vh;
+    }
+  }
+  .max-width- {
+    &#{$value}vw {
+      max-width: $value vw;
+    }
+  }
+}
+
+
+.width-full {
+  width: 100%;
+}
+.min-width-full {
+  min-width: 100%;
+}
+.max-width-default {
+  max-width: 800px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .m-width {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .m-width {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .l-max-width {
+    max-width: 800px;
+  }
+}

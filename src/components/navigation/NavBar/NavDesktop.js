@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Menu,
-  Icon,
-} from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 import {
   homePage,
-  menuPagesForNavBar,
+  menuPages,
 } from '../config';
+import NavItem from './NavItem';
+import { Logo } from '../../templates';
+import  { shared } from '../../../copy';
 
 export const NavDesktop = (props) => (
   <Menu
@@ -18,32 +17,17 @@ export const NavDesktop = (props) => (
     fixed={props.fixedNavLocation || ''}
     className="f-no-border"
   >
-    <Link to={`/${homePage}`} onClick={props.setNavHome} className="no-link f-text-white">
-      <div className="flex align-items-center height-fill padding-left-right-10">
-        <Icon
-          name='dna'
-          size='large'
-        />
-        <span className="font-lgr font-special ">
-          Physical Therapy Group of Westchester
-        </span>
-      </div>
-    </Link>
-
+    <Logo
+      title={shared.siteTitle}
+      homePage={homePage}
+      handleClick={props.setNavHome}
+    />
     <Menu.Menu position='right'>
-      {
-        menuPagesForNavBar().map(page => (
-          <Menu.Item 
-            as={Link}
-            key={page}
-            to={`/${page}`}
-            name={page}
-            active={props.isActive(page)}
-            onClick={props.onClick}
-            className="font-lgr"
-          />
-        ))
-      }
+      <NavItem
+        menuPages={menuPages}
+        isActive={props.isActive}
+        onClick={props.onClick}
+      />
     </Menu.Menu>
   </Menu>
 );

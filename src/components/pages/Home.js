@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
 
-import { HeadBanner, QuoteBanner, DividedBanner } from '../templates';
+import { HeaderImageBanner, QuoteBanner, DividedBanner } from '../templates';
 import { HoursAndDirections } from './Home/';
 import { bannerContent } from '../../copy';
 
 const Home = () => (
   <Container fluid>
-    <HeadBanner
-      className="banner-image-dryBark flex align-items-center justify-content-center text-shadow-default"
+    <HeaderImageBanner
+      className="banner-image-father-holding-child-beach flex align-items-center justify-content-center text-shadow-default"
       content='Physical Therapy Group of Westchester'
       subheader='We take pride in our ability to provide one-on-one exceptional care by the most qualified, experienced and licensed physical therapists throughout your entire course of treatment.'
     />
