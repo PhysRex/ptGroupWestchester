@@ -1,5 +1,5 @@
 
-
+/* font-sizes */
 .font- {
   &xxs {
     font-size: 0.125rem;
@@ -43,7 +43,51 @@
     }
   }
 }
+.f-font- {
+  &xxs {
+    font-size: 0.125rem !important;
+  }
+  &xs {
+    font-size: 0.25rem !important;
+  }
+  &sm {
+    font-size: 0.5rem !important;
+  }
+  &md {
+    font-size: 0.75rem !important;
+  }
+  &lg {
+    font-size: 1rem !important;
+  }
+  &lgr {
+    font-size: 1.25rem !important;
+  }
+  &lgst {
+    font-size: 1.5rem !important;
+  }
+  &xl-less {
+    font-size: 1.75rem !important;
+  }
+  &xl {
+    font-size: 2rem !important;
+  }
+  &xlr {
+    font-size: 2.25rem !important;
+  }
+  &xxl {
+    font-size: 3rem !important;
+  }
+  &xxlr {
+    font-size: 3.5rem !important;
+  }
+  @for $i from 1 through 20 {
+    &#{$i}rem {
+      font-size: $i + "rem !important";
+    }
+  }
+}
 
+/* font-weight */
 .font-weight- {
   &100 { font-weight: 100;}
   &200 { font-weight: 200;}
@@ -55,8 +99,9 @@
   &800 { font-weight: 800;}
 }
 
+/* font color */
 .text- {
-  &white { color: $white; }
+  &white { color: $lightTan; }
   &red { color: $red; }
   &green { color: $green; }
   &blue { color: $blue; }
@@ -64,12 +109,13 @@
   &primary-alternate { color: $primaryColorAlternate; }
 }
 .f-text-{
-  &white { color: $white !important; }
+  &white { color: $lightTan !important; }
   &red { color: $red !important; }
   &green { color: $green !important; }
   &blue { color: $blue !important; }
 }
 
+/* Text-align */
 .text-align- {
   &left {
     text-align: left;
@@ -82,6 +128,7 @@
   }
 }
 
+/* Text vertical-align */
 .vertical-align- {
   &bottom {
     vertical-align: bottom;
@@ -97,8 +144,10 @@
   }
 }
 
-
-// https://css-tricks.com/almanac/properties/t/text-shadow/
+/**
+ * Text-shadow 
+ * https://css-tricks.com/almanac/properties/t/text-shadow/
+ */
 @mixin textShadowDefault() {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);
   // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -133,18 +182,45 @@
   }
 }
 
-.text-shadow {
-}
-
+/* font-family */
 .font-special {
   // font-family: 'Playfair Display SC', serif;
   // font-family: 'Quattrocento', serif;
   // font-family: 'Ultra', serif;
   // font-family: 'Alegreya SC', serif;
   // font-family: 'Cinzel Decorative', cursive;
-  // font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   // font-family: 'Rouge Script', cursive;
   // font-family: 'Oleo Script Swash Caps', cursive;
-  font-family: 'Sofia', cursive;
-
+  // font-family: 'Sofia', cursive;
+  // font-family: 'Titillium Web';
+}
+.font-family- {
+  &playfair {
+    font-family: 'Playfair Display SC', serif;
+  }
+  &quattrocento {
+    font-family: 'Quattrocento', serif;
+  }
+  &ultra {
+    font-family: 'Ultra', serif;
+  }
+  &alegraya {
+    font-family: 'Alegreya SC', serif;
+  }
+  &cinzel {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  &merriweather {
+    font-family: 'Merriweather', serif;
+  }
+  &rouge {
+    font-family: 'Rouge Script', cursive;
+  }
+  &oleo {
+    font-family: 'Oleo Script Swash Caps', cursive;
+  }
+  &sofia {
+    font-family: 'Sofia', cursive;
+  }
 }

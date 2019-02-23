@@ -1,0 +1,28 @@
+
+/**
+ * Fix for semantic ui sidebar: font-size
+ * Used to override default font sice for icon in sidebar
+ */
+.ui.labeled.icon.menu .item > i.sidebar.icon.f-font-xl-override  {
+  font-size: 2rem !important;
+}
+
+/**
+ * fix for semantic ui sidebar: removes scrollbar when open
+ */
+.pushable {
+  overflow-x: inherit;
+}
+
+/**
+ * fix for semantic ui sidebar: makes it stick to top
+ * (changes the sidebar back to Page Context)
+ */
+.pushable:not(body) {
+  transform: none;
+}
+.pushable:not(body) > .ui.sidebar,
+.pushable:not(body) > .fixed,
+.pushable:not(body) > .pusher:after {
+  position: fixed;
+}

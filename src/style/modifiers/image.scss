@@ -71,13 +71,20 @@ $bannerHeight: 102vh;
       // filter: grayscale(100%);
       // filter: blur(1px);
       filter: sepia(40%);
-      // filter: brightness(100%);
+      // filter: brightness(120%);
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .banner-image-#{$imageName} {
+      &::before {
+        background-position: right -100px bottom 0px;
+      }
     }
   }
   @media only screen and (max-width: 600px) {
     .banner-image-#{$imageName} {
       &::before {
-        background-position: right -40px bottom 0px;
+        background-position: right -150px bottom 0px;
       }
     }
   }
