@@ -11,8 +11,9 @@ const Logo = ({ title, homePage, handleClick }) => (
       <Icon
         name='dna'
         size='large'
+        className="text-shadow-default"
       />
-      <span className="font-lgr font-special">{title}</span>
+      <span className="font-lgr font-family-sofia text-shadow-default">{title}</span>
     </div>
   </Link>
 );

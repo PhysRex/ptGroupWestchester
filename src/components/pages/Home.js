@@ -9,7 +9,8 @@ const Home = () => (
   <Container fluid>
     <HeaderImageBanner
       className="banner-image-father-holding-child-beach flex align-items-center justify-content-center text-shadow-default"
-      content='Physical Therapy Group of Westchester'
+      primaryContent='Physical Therapy Group'
+      secondaryContent='of Westchester'
       subheader='We take pride in our ability to provide one-on-one exceptional care by the most qualified, experienced and licensed physical therapists throughout your entire course of treatment.'
     />
     <QuoteBanner

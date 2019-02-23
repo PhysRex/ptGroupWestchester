@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { NavBar, Routes } from './components/navigation';
+import { NavBar, Routes, ScrollToTop } from './components/navigation';
 import { Footer } from './components/templates';
 
 import './style/scripts/customFontLoader.js';
@@ -18,12 +18,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <NavBar fixedNavLocation='top'>
-            <Routes />
-            <Footer />
-          </NavBar>
-        </div>
+        <ScrollToTop>
+          <div>
+            <NavBar fixedNavLocation='top'>
+              <Routes />
+              <Footer />
+            </NavBar>
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }
