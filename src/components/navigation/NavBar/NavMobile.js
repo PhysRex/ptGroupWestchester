@@ -18,6 +18,7 @@ export const NavMobile = ({
   <Sidebar.Pushable>
     <Sidebar
       as={Menu}
+      className="f-bg-primary"
       animation='push'
       direction='left'
       icon='labeled'
@@ -26,13 +27,17 @@ export const NavMobile = ({
       width='thin'
       onHide={sidebarHide}
     >
-      <Menu.Item as='a' onClick={sidebarHide}>
-        <Icon name='sidebar'/>
+      <Menu.Item as='a' onClick={sidebarHide} >
+        <Icon
+        name='arrow left'
+        className="f-font-xl-override text-white text-shadow-default"
+        />
       </Menu.Item>
       <NavItem
         menuPages={menuPages}
         isActive={isActive}
         onClick={onClick}
+        addtlClassNames="f-text-white"
       />
     </Sidebar>
     <Sidebar.Pusher dimmed={visible}>{ children }</Sidebar.Pusher>

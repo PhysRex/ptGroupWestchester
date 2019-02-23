@@ -15,7 +15,7 @@ export const NavDesktop = (props) => (
     secondary
     pointing
     fixed={props.fixedNavLocation || ''}
-    className="f-no-border"
+    className="f-no-border f-bg-primary"
   >
     <Logo
       title={shared.siteTitle}
