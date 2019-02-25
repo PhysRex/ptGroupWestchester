@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import { NavBar, Routes, ScrollToTop } from './components/navigation';
 import { Footer } from './components/templates';
+import { baseRoute } from './components/navigation/config'
 
 import './style/scripts/customFontLoader.js';
 import 'semantic-ui-css/semantic.min.css';
@@ -17,7 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={baseRoute}>
         <ScrollToTop>
           <div>
             <NavBar fixedNavLocation='top'>

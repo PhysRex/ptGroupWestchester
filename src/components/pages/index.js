@@ -11,11 +11,29 @@ import ErrorPage from './ErrorPage';
  */
 
 export default [
-  Home,
-  Team,
-  Testimonials,
-  Forms,
-  ErrorPage,
+  {
+    name: 'Home',
+    component: Home,
+  },
+  {
+    name: 'Team',
+    component: Team,
+  },
+  {
+    name: 'Testimonials',
+    component: Testimonials,
+  },
+  {
+    name: 'Forms',
+    component: Forms,
+  },
+  {
+    name: 'ErrorPage',
+    component: ErrorPage,
+  },
 
-  Profile,
+  {
+    name: 'Profile',
+    component: Profile,
+  },
 ];

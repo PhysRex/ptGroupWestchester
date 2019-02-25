@@ -3,6 +3,7 @@ import fp from 'lodash/fp';
 
 import Pages from '../pages';
 
+const baseRoute = '/ptGroupWestchester';
 const homePage = 'Home';
 const errorPage = 'ErrorPage';
 const pagesToOmitOnRoute = ['Dashboard', 'Profile'];
@@ -18,7 +19,7 @@ const pageAliases = {
  * @returns {array<JSX>} The page components in the React Router routes
  */
 function getAllPageComponents() {
-  return _.filter(Pages, ({ name }) => name !== pagesToOmitOnRoute);
+  return _.filter(Pages, ({ name }) => !pagesToOmitOnRoute.includes(name));
 }
 
 /**
@@ -44,11 +45,12 @@ const menuPages = menuPagesForNavBar();
  * @returns {JSX} A page component
  */
 function getPageComponent(pageName) {
-  return allPageComponents.find(({name}) => name === pageName);
+  return allPageComponents.find(({ name }) => name === pageName)['component'];
 }
 
 
 export {
+  baseRoute,
   homePage,
   errorPage,
   allPageComponents,

@@ -16,11 +16,11 @@ export const Routes = () => (
   <Switch>
     <Route path='/' exact component={getPageComponent(homePage)} />
     {
-      allPageComponents.map((page) =>
+      allPageComponents.map(({name, component}) =>
         <Route
-          key={page.name}
-          path={`/${page.name}`}
-          component={page}
+          key={name}
+          path={`/${name}`}
+          component={component}
         />
       )
     }
