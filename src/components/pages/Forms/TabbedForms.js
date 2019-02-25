@@ -6,7 +6,6 @@ import {
   Tab,
   Header,
   Button,
-  Label,
   Popup,
 } from 'semantic-ui-react';
 
@@ -29,7 +28,6 @@ const tabPanes = (formsToDisplay) => formsToDisplay.map(({ name, downloadLink, d
             trigger={
               <a href={downloadLink} target='_blank' rel="noopener noreferrer" download>
                 <Button
-                  // basic
                   content={formattedName}
                   label={{ as: 'a', basic: true, icon: 'download', color: 'gray' }}
                   labelPosition='right'
