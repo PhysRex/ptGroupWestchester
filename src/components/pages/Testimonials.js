@@ -10,7 +10,7 @@ const Testimonials = () => (
   <Container fluid>
     <HeaderBanner
       className="banner-background-bannerPrimary flex align-items-center justify-content-center"
-      content='hi!!'
+      content='Our Stories'
       subheader='We strive to make true and lasting relationships with every patient'
     />
     <TestimonialsContainer content={testimonialContent} />

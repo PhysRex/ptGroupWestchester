@@ -1,5 +1,6 @@
 import React from 'react';
-import { List } from 'semantic-ui-react';
+import { List, Tab } from 'semantic-ui-react';
+
 import { DownloadLink } from '../../templates';
 
 
