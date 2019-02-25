@@ -56,6 +56,9 @@ $bannerHeight: 102vh;
     height: $bannerHeight;
     &::before {
       background-image: url('./assets/images/' + $imageName + '.jpg') !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -o-background-size: cover !important;
       background-size: cover !important;
       background-position: center;
       background-attachment: fixed;
