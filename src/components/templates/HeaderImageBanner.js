@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Grid,
- } from 'semantic-ui-react'
+} from 'semantic-ui-react';
 
 const HeaderImageBanner = ({ className, primaryContent, secondaryContent, subheader }) => (
   <Grid className={className}>
