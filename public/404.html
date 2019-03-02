@@ -23,9 +23,12 @@
       // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
       // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
       // Otherwise, leave segmentCount as 0.
-      var segmentCount = 0;
+      var segmentCount = 1;
 
       var l = window.location;
+      console.log('404 redirect!')
+      console.log(' > l: ', l);
+      console.log(' > segmentCount: ', segmentCount);
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
@@ -33,9 +36,12 @@
         (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
+      console.log(' > new l: ', l);
 
     </script>
   </head>
   <body>
+    <h1>This is a 404 page</h1>
+    <p>And hopefully you never see this...</p>
   </body>
 </html>
