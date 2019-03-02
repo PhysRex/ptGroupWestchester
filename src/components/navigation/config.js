@@ -10,6 +10,7 @@ const pagesToOmitOnRoute = ['Dashboard', 'Profile'];
 const pagesToOmitOnNavBar = [errorPage, 'Dashboard', 'Profile'];
 const pageAliases = {
   Team: 'Our Team',
+  Services: 'Our Services',
   Testimonials: 'Our Stories',
   Forms: 'Resources',
 };

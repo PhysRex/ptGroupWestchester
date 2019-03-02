@@ -25,15 +25,18 @@ export const BiographyBanner = ({ content }) => (
               </Card>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={7} computer={6}>
-              <Header as='h2'>
-                {name}
-                <Label content={degrees} size='tiny' className=""/>
-                <Header.Subheader>
-                  {role} 
-                </Header.Subheader>
+              <Header>
+                <h2 className="font-family-cinzel">
+                  {name}
+                  <Label content={degrees} size='tiny' className=""/>
+                </h2>
+                <Header.Subheader
+                  className="font-family-merriweather"
+                  content={role}
+                />
               </Header>
               <p className='font-lg'>{description}</p>
-              <p className='font-xl-less font-weight-800'>&quot;{quote}&quot;</p>
+              <p className='font-xl-less font-weight-800 font-family-oleo'>&quot;{quote}&quot;</p>
             </Grid.Column>
           </Grid.Row>
         )

@@ -13,7 +13,7 @@ const NavItem = ({ menuPages, isActive, onClick, addtlClassNames }) => menuPages
     content={alias}
     active={isActive(name)}
     onClick={onClick}
-    className={`font-lgr text-shadow-default ${addtlClassNames}`}
+    className={`font-lgr text-shadow-default font-family-alegreya ${addtlClassNames}`}
   />
 ));
 

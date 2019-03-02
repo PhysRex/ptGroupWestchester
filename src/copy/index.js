@@ -3,6 +3,7 @@ import bioContent from './team';
 import testimonialContent from './testimonials';
 import listOfForms from './forms';
 import shared from './shared';
+import servicesContent from './services';
 
 export {
   bannerContent,
@@ -10,4 +11,5 @@ export {
   testimonialContent,
   listOfForms,
   shared,
+  servicesContent,
 }

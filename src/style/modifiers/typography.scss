@@ -42,6 +42,13 @@
       font-size: $i + rem;
     }
   }
+  @for $i from 1 through 20 {
+    &#{$i}rem-mobile {
+      @media only screen and (max-width: 600px) {
+        font-size: $i + rem;
+      }
+    }
+  }
 }
 .f-font- {
   &xxs {
@@ -83,6 +90,13 @@
   @for $i from 1 through 20 {
     &#{$i}rem {
       font-size: $i + "rem !important";
+    }
+  }
+  @for $i from 1 through 20 {
+    &#{$i}rem-mobile {
+      @media only screen and (max-width: 600px) {
+        font-size: $i + rem !important;
+      }
     }
   }
 }
@@ -196,6 +210,9 @@
   // font-family: 'Titillium Web';
 }
 .font-family- {
+  &Titillium {
+    font-family: 'Titillium Web', sans-serif;
+  }
   &playfair {
     font-family: 'Playfair Display SC', serif;
   }
@@ -205,10 +222,13 @@
   &ultra {
     font-family: 'Ultra', serif;
   }
-  &alegraya {
+  &alegreya {
     font-family: 'Alegreya SC', serif;
   }
   &cinzel {
+    font-family: 'Cinzel', cursive;
+  }
+  &cinzel-decorative {
     font-family: 'Cinzel Decorative', cursive;
   }
   &merriweather {
@@ -223,4 +243,49 @@
   &sofia {
     font-family: 'Sofia', cursive;
   }
+  &laila {
+    font-family: 'Laila', cursive;
+  }
+  &parisienne {
+    font-family: 'Parisienne', cursive;
+  }
+  &mate {
+    font-family: 'Mate SC', serif;
+  }
+  &diplomata {
+    font-family: 'Diplomata SC', cursive;
+  }
+  &gravitas {
+    font-family: 'Gravitas One', cursive;
+  }
 }
+
+
+.word-break- {
+  &.normal {
+    word-break: normal;
+  }
+  &.keep-all {
+    word-break: keep-all;
+  }
+  &.break-all {
+    word-break: break-all;
+  }
+}
+
+
+.line-height- {
+  @for $i from 1 through 20 {
+    &#{$i}rem {
+      line-height: $i + rem;
+    }
+  }
+  @for $i from 1 through 20 {
+    &#{$i}rem-mobile {
+      @media only screen and (max-width: 600px) {
+        line-height: $i + rem;
+      }
+    }
+  }
+}
+

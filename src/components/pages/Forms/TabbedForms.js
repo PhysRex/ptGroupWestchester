@@ -29,7 +29,12 @@ const tabPanes = (formsToDisplay) => formsToDisplay.map(({ name, downloadLink, d
               <a href={downloadLink} target='_blank' rel="noopener noreferrer" download>
                 <Button
                   content={formattedName}
-                  label={{ as: 'a', basic: true, icon: 'download', color: 'gray' }}
+                  label={{
+                    as: 'a',
+                    basic: true,
+                    icon: 'download',
+                    color: 'gray'
+                  }}
                   labelPosition='right'
                 />
               </a>

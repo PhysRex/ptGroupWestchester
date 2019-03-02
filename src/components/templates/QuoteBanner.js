@@ -12,7 +12,7 @@ const QuoteBanner = ({ className, content }) => (
   >
     <Grid.Column mobile={12} desktop={10}>
       <TextContent
-        className={className}
+        className={`font-family-oleo ${className}`}
         content={content}
       />
     </Grid.Column>

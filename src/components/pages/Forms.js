@@ -13,8 +13,8 @@ const Forms = () => (
   <Container fluid>
     <HeaderBanner
       className="banner-background-bannerPrimary flex align-items-center justify-content-center"
-      content='Resources'
-      subheader='Lots of forms to download...'
+      content='Forms'
+      subheader='Review our resources below and download the right one for you'
     />
     <TabbedForms formsToDisplay={listOfForms} />
     <QuoteBanner

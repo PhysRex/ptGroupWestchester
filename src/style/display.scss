@@ -29,4 +29,17 @@
   }
 }
 
-
+.display- {
+  &inline {
+    display: inline;
+  }
+  &inline-block {
+    display: inline-block;
+  }
+  &block {
+    display: block;
+  }
+  &table {
+    display: table;
+  }
+}

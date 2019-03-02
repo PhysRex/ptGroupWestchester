@@ -18,14 +18,14 @@ export const NavMobile = ({
   <Sidebar.Pushable>
     <Sidebar
       as={Menu}
-      className="f-bg-primary"
+      vertical
       animation='push'
       direction='left'
       icon='labeled'
-      vertical
-      visible={visible}
       width='thin'
+      visible={visible}
       onHide={sidebarHide}
+      className="f-bg-primary"
     >
       <Menu.Item as='a' onClick={sidebarHide} >
         <Icon

@@ -13,6 +13,7 @@ WebFont.load({
     families: [
       'Titillium Web:300,400,700',
       'Alegreya SC:300,400,700',
+      'Cinzel:300,400,700',
       'Cinzel Decorative:300,400,700',
       'Playfair Display SC:300,400,700',
       'Quattrocento:300,400,700',
@@ -21,6 +22,11 @@ WebFont.load({
       'Sofia:300,400,700',
       'Rouge Script:300,400,700',
       'Oleo Script Swash Caps:300,400,700',
+      'Laila:300,400,500,600,700',
+      'Parisienne:400',
+      'Mate SC:400',
+      'Diplomata SC:400',
+      'Gravitas One:400'
     ]
   },
   custom: {
