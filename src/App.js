@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+// import { HashRouter as Router } from 'react-router-dom';
 
 import { NavBar, Routes, ScrollToTop } from './components/navigation';
 import { Footer } from './components/templates';
@@ -18,7 +19,9 @@ if (process.env.NODE_ENV !== 'production') {
 class App extends Component {
   render() {
     return (
-      <Router basename={baseRoute}>
+      <Router 
+        basename={baseRoute}
+      >
         <ScrollToTop>
           <div>
             <NavBar fixedNavLocation='top'>
