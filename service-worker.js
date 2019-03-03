@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ptGroupWestchester/precache-manifest.39ceecfed9c6460ca678221c85e5fe1a.js"
+  "/ptGroupWestchester/precache-manifest.9c71e21d1b778c7e107e15dc9fbe645b.js"
 );
 
 workbox.clientsClaim();
