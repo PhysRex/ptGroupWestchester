@@ -15,10 +15,11 @@ export const NavDesktop = (props) => (
     secondary
     pointing
     fixed={props.fixedNavLocation || ''}
-    className="f-no-border f-bg-primary"
+    className="f-no-border f-bg-primary padding-top-bottom-3"
   >
     <Logo
-      title={shared.siteTitle}
+      title={shared.site.title}
+      subtitle={shared.site.subtitle}
       homePage={homePage}
       handleClick={props.setNavHome}
     />
@@ -27,6 +28,7 @@ export const NavDesktop = (props) => (
         menuPages={menuPages}
         isActive={props.isActive}
         onClick={props.onClick}
+        addtlClassNames="f-padding-left-right-10"
       />
     </Menu.Menu>
   </Menu>

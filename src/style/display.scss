@@ -5,27 +5,53 @@
 
 .flex {
   display: flex !important;
-  &.align-items {
-    &-center {
-      align-items: center
+  &.align-items- {
+    &stretch {
+      align-items: stretch;
     }
-    &-start {
-      align-items: start
+    &start {
+      align-items: flex-start;
     }
-    &-end {
-      align-items: end
+    &end {
+      align-items: flex-end;
+    }
+    &center {
+      align-items: center;
+    }
+    &baseline {
+      align-items: baseline;
     }
   }
-  &.justify-content {
-    &-center {
-      justify-content: center
+  &.justify-content- {
+    &around {
+      justify-content: space-around;
     }
-    &-start {
-      justify-content: start
+    &evenly {
+      justify-content: space-evenly;
     }
-    &-end {
-      justify-content: end
+    &between {
+      justify-content: space-between;
     }
+    &start {
+      justify-content: flex-start;
+    }
+    &end {
+      justify-content: flex-end;
+    }
+    &center {
+      justify-content: center;
+    }
+  }
+  &.flex-direction- {
+    &row {
+      flex-direction: row;
+    }
+    &column {
+      flex-direction: column;
+    }
+  }
+  &.flex-wrap {
+    flex-wrap: wrap;
   }
 }
 

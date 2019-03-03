@@ -1,4 +1,7 @@
 
 export default {
-  siteTitle: 'Physical Therapy Group of Westchester',
+  site: {
+    title: 'Physical Therapy Group',
+    subtitle: 'Of Westchester',
+  }
 }
