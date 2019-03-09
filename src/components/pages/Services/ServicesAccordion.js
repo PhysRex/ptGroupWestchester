@@ -26,7 +26,7 @@ const servicesPanels = (content) =>
           />
           <Message attached='bottom' info color='teal'>
             <Icon name='help' />
-            Have more questions? <a target="_blank" href={source}>Click here</a>!
+            Have more questions? <a target="_blank" rel="noopener noreferrer" href={source}>Click here</a>!
           </Message>
         </div>
       ),

@@ -8,7 +8,6 @@ import {
 import { Logo } from './';
 import {
   homePage,
-  menuPages,
 } from '../../components/navigation/config';
 import  { shared } from '../../copy';
 
@@ -33,13 +32,14 @@ export const Footer = () => (
 
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row className="" columns="equal">
+        <Grid.Row className="margin-bottom-20" columns="equal">
          <Grid.Column mobile={16} tablet={8} computer={8}>
 
             <Header as='h2' textAlign='center' className="">
-              Footer component
+              Hours
               <Header.Subheader>
-                Should include hours, logo info, etc...
+                <div>M, W 8AM-7PM</div>
+                <div>T, Th, F 7AM - 7PM</div>
               </Header.Subheader>
             </Header>
 
@@ -47,9 +47,10 @@ export const Footer = () => (
          <Grid.Column mobile={16} tablet={8} computer={8}>
 
             <Header as='h2' textAlign='center' className="">
-              Footer component
+              Contact Us
               <Header.Subheader>
-                Should include hours, logo info, etc...
+                <div>{shared.business.hoursShort[0]}</div>
+                <div>{shared.business.hoursShort[1]}</div>
               </Header.Subheader>
             </Header>
 
