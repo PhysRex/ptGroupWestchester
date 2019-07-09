@@ -1,36 +1,41 @@
 import {
   practiceOutsideEdited,
-  practiceAerialViewEdited,
   hengAndFamilyEdited,
+  backMassage,
 } from '../assets/images';
+import {
+  gym,
+  gymOffice,
+  waitingRoom
+} from '../assets/images/office';
+
+
+const headerContent = {
+  title: '',
+  description: 'We take pride in our ability to provide one-on-one exceptional care by the most qualified licensed physical therapists through your entire course of treatment, without any aides, assistants or interns.',
+}
 
 const bannerContent = [
   {
     title: 'Our Location',
-    description: 'Deven Chopra was born in Mumbai and spent much of his life in Hong Kong, moving to Paris at the age of 18 to study fine art at the École des Beaux-Arts. His work is known for blurring the line between technology and art and has been selected for display at exhibitions in Paris, Shanghai, and New York.',
+    description: 'We are conveniently located in the Rye Ridge Shopping Center.  The closest entrance to our office is in front of building #10, next to Coco Nails & Spa.  You can take the elevator or the stairs to our suite on the 2nd floor.  We have private treatment rooms and a shared gym area with all the necessary exercise equipment for rehabilitation.',
     image: practiceOutsideEdited,
   },
   {
     title: 'Our Story',
-    description: 'We met in 2009, at a backpacker hostel in Amsterdam. We hit it off immediately, bonding over our love of Gauguin and jazz. We had a magical time together in France during Anya\'s first year at grad school, and we both knew it was time. We were engaged in March 2014, and now we\'re getting married!',
-    image: hengAndFamilyEdited,
+    description: 'For the past 33 years, we have successfully treated infants through geriatrics with a variety of conditions.  Our physical therapists have the most specialized training to help you get back in motion and they are trusted healthcare professionals with extensive training in diagnosing and treating conditions that limit the body\'s ability to move and function in daily life.  We also have experienced front desk staff who can help you too.',
+    image: gymOffice,
   },
   {
     title: 'Our Purpose',
-    description: 'Anya Pillai grew up in the Bay Area, spending much of her childhood in Palo Alto and Cupertino. She studied at Harvard and worked in New York for two years before going to get her MBA at INSEAD in Fontainebleau and Singapore. Today, she works as an associate at Washburne Ventures in London.',
-    image: practiceAerialViewEdited,
-  },
-  {
-    title: 'Our Story',
-    description: 'We met in 2009, at a backpacker hostel in Amsterdam. We hit it off immediately, bonding over our love of Gauguin and jazz. We had a magical time together in France during Anya\'s first year at grad school, and we both knew it was time. We were engaged in March 2014, and now we\'re getting married!',
-    image: hengAndFamilyEdited,
-  },
-  {
-    title: 'Our Purpose',
-    description: 'Anya Pillai grew up in the Bay Area, spending much of her childhood in Palo Alto and Cupertino. She studied at Harvard and worked in New York for two years before going to get her MBA at INSEAD in Fontainebleau and Singapore. Today, she works as an associate at Washburne Ventures in London.',
-    image: practiceAerialViewEdited,
+    description: 'We promise to help you improve your mobility and your quality of life, as an alternative or as an adjunct to surgery and pain medication.  We will offer the highest quality of care to each individual and we will treat you with the respect you deserve.  Our experience front desk will help you to navigate your insurance benefits by answering any questions or concerns with the most personable and professional service.',
+    image: backMassage,
   },
 ];
 
+export {
+  bannerContent,
+  headerContent
+};
 
 export default bannerContent;

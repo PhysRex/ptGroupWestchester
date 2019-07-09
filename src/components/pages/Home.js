@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 
 import { HeaderImageBanner, QuoteBanner, DividedBanner } from '../templates';
-import { HoursAndDirections } from './Home/';
-import { bannerContent } from '../../copy';
+import { HoursAndDirections, ReferralBanner } from './Home/';
+import { bannerContent, headerContent } from '../../copy/home';
 
 const Home = () => (
   <Container fluid>
@@ -11,7 +11,7 @@ const Home = () => (
       className="banner-image-father-holding-child-beach flex align-items-center justify-content-center text-shadow-default"
       primaryContent='Physical Therapy Group'
       secondaryContent='of Westchester'
-      subheader='We take pride in our ability to provide one-on-one exceptional care by the most qualified, experienced and licensed physical therapists throughout your entire course of treatment.'
+      subheader={headerContent.description}
     />
     <QuoteBanner
       className="font-xl text-align-center margin-top-bottom-70"
@@ -21,8 +21,9 @@ const Home = () => (
     <HoursAndDirections />
     <QuoteBanner
       className="font-xl text-align-center margin-top-bottom-70"
-      content='You will receive Innovative Physical Therapy services directed to the treatment and prevention of sports injuries, repetitive strain disorders and conditions involving bone, joint and soft tissue.'
+      content='Your health and your care is our utmost priority.'
     />
+    <ReferralBanner />
   </Container>
 );
 

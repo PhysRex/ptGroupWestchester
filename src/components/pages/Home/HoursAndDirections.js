@@ -7,43 +7,10 @@ import {
   Responsive,
 } from 'semantic-ui-react';
 
+import { shared } from '../../../copy';
 import { convertObjToUrlParams } from '../../../utilities/utilities';
 
-const hours = [
-  {
-    day: 'Monday',
-    open: '8AM',
-    close: '7PM',
-  },
-  {
-    day: 'Tuesday',
-    open: '7AM',
-    close: '7PM',
-  },
-  {
-    day: 'Wednesday',
-    open: '8AM',
-    close: '7PM',
-  },
-  {
-    day: 'Thursday',
-    open: '7AM',
-    close: '7PM',
-  },
-  {
-    day: 'Friday',
-    open: '7AM',
-    close: '7PM',
-  },
-  {
-    day: 'Saturday',
-    isClosed: true,
-  },
-  {
-    day: 'Sunday',
-    isClosed: true,
-  },
-];
+
 
 // TODO: update to use exact coords for business?
 const mapsUrl = {
@@ -74,13 +41,13 @@ export const HoursAndDirections = () => (
           <Grid.Column mobile={16} tablet={6} computer={6}>
             <Header as='h2' textAlign='center' className="f-text-white">
               Office Hours
-              <Header.Subheader>
-                Call us anytime 
-              </Header.Subheader>
+              {/* <Header.Subheader>
+                Available off-hours by special appointment, ask for details 
+              </Header.Subheader> */}
             </Header>
             <Grid padded='horizontally' className="f-margin-top-bottom-30">
             {
-              hours.map(({day, open, close, isClosed}) => 
+              shared.business.hours.map(({day, open, close, isClosed}) => 
                 <Grid.Row key={day} columns={2} className="f-padding-top-bottom-5 font-lgr">
                   <Grid.Column textAlign='right'>{day}</Grid.Column>
                   <Grid.Column textAlign='left'>{isClosed ? 'Closed' : `${open} - ${close}`}</Grid.Column>
@@ -94,12 +61,12 @@ export const HoursAndDirections = () => (
             <Header as='h2' textAlign='center' className="f-text-white">
               Location
               <Header.Subheader>
-                Minutes from major highways and public transit
+                Minutes from I-95 (exit 21), 287 (exit 10) & the Hutchinson River Parkway (exit 26 E)
               </Header.Subheader>
             </Header>
 
             {/*FIXME: recalculate height with every change in width... */}
-            <Card fluid className="no-border f-box-shadow-pale-transition">
+            <Card fluid className="no-border f-box-shadow-pale">
               <iframe
                 title="Physical Therapy Group of Westchester Map"
                 src={srcForMaps}
