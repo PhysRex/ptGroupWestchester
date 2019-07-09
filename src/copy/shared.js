@@ -7,25 +7,53 @@ export default {
   business: {
     fullName: 'Physical Therapy Group of Westchester',
     telephone: '914.253.6457',
+    fax: '914.253.6458',
     address: {
       street: '10 Rye Ridge Plaza',
       suite: 219,
       city: 'Rye',
       state: 'NY',
+      zipCode: '10573',
       country: 'USA',
     },
-    hours: {
-      monday: ['8AM','7PM'],
-      tuesday: ['7AM','7PM'],
-      wednesday: ['8AM','7PM'],
-      thursday: ['7AM','7PM'],
-      friday: ['7AM','7PM'],
-      saturday: 'Closed',
-      sunday: 'Closed'
-    },
+    email: 'ptwestchester@verizon.net',
+    hours: [
+      {
+        day: 'Monday',
+        open: '7AM',
+        close: '7PM',
+      },
+      {
+        day: 'Tuesday',
+        open: '7AM',
+        close: '7PM',
+      },
+      {
+        day: 'Wednesday',
+        open: '7AM',
+        close: '7PM',
+      },
+      {
+        day: 'Thursday',
+        open: '7AM',
+        close: '7PM',
+      },
+      {
+        day: 'Friday',
+        open: '7AM',
+        close: '7PM',
+      },
+      {
+        day: 'Saturday',
+        isClosed: true,
+      },
+      {
+        day: 'Sunday',
+        isClosed: true,
+      },
+    ],
     hoursShort: [
-      'M, W 8AM-7PM',
-      'T, Th, F 7AM - 7PM'
+      'Mon - Fri 7AM - 7PM'
     ]
   },
 }

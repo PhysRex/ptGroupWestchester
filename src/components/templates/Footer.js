@@ -36,12 +36,16 @@ export const Footer = () => (
          <Grid.Column mobile={16} tablet={8} computer={8}>
 
             <Header as='h2' textAlign='center' className="">
-              Hours
+              Visit Us
               <Header.Subheader>
-                <div>M, W 8AM-7PM</div>
-                <div>T, Th, F 7AM - 7PM</div>
+                <div>{shared.business.hoursShort}</div>
               </Header.Subheader>
             </Header>
+            <div> 
+              <div>{shared.business.address.street}</div>
+              <div>Suite {shared.business.address.suite}</div>
+              <div>{shared.business.address.city}, {shared.business.address.state} {shared.business.address.zipCode}</div>
+            </div>
 
           </Grid.Column>
          <Grid.Column mobile={16} tablet={8} computer={8}>
@@ -49,10 +53,15 @@ export const Footer = () => (
             <Header as='h2' textAlign='center' className="">
               Contact Us
               <Header.Subheader>
-                <div>{shared.business.hoursShort[0]}</div>
-                <div>{shared.business.hoursShort[1]}</div>
+                Please give us a call anytime
               </Header.Subheader>
             </Header>
+            {/* TODO: fix how this looks */}
+            <div> 
+              <div>Phone: <a className="link-white" href={`tel:+${shared.business.telephone}`}>{shared.business.telephone}</a></div>
+              <div>Fax: {shared.business.fax}</div>
+              <div>Email: <a className="link-white" href={`mailto:${shared.business.email}`}>{shared.business.email}</a></div>
+            </div>
 
           </Grid.Column>
         </Grid.Row>

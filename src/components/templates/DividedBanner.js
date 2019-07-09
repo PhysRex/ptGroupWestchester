@@ -32,6 +32,7 @@ const DividedBanner = ({ content }) => (
               className="f-margin-bottom-30"
             >
               <Image
+                className=""
                 src={image}
                 rounded
                 fluid

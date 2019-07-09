@@ -8,7 +8,7 @@ const homePage = 'Home';
 const errorPage = 'ErrorPage';
 const pagesToOmitOnRoute = ['Dashboard', 'Profile'];
 const pagesToOmitOnNavBar = [errorPage, 'Dashboard', 'Profile'];
-const pageAliases = {
+const pageAliases = { //FIXME: remove, should be done through Pages index.js import
   Team: 'Our Team',
   Services: 'Our Services',
   Testimonials: 'Our Stories',

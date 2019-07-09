@@ -21,7 +21,7 @@ const tabPanes = (formsToDisplay) => formsToDisplay.map(({ name, downloadLink, d
     menuItem: formattedName,
     render: () => (
       <Grid>
-        <Grid.Column textAlign='center'>
+        <Grid.Column textAlign='center' className="margin-top-20">
           <Header as='h2' content={formattedName} />
           <p>{description}</p>
           <Popup
@@ -48,7 +48,7 @@ const tabPanes = (formsToDisplay) => formsToDisplay.map(({ name, downloadLink, d
 });
 
 const TabbedForms = ({ formsToDisplay }) => (
-  <Container className="margin-top-50">
+  <Container className="margin-top-50 margin-bottom-50">
     <Grid>
       <Grid.Row centered>
         <Grid.Column textAlign='center' computer={10} mobile={16}>

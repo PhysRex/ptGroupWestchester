@@ -47,6 +47,13 @@
   }
 }
 
+.img-fix-height {
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
 
 $bannerHeight: 102vh;
 @mixin bannerImage($imageName) {

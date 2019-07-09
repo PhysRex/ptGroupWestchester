@@ -14,11 +14,11 @@ const Forms = () => (
     <HeaderBanner
       className="banner-background-bannerPrimary flex align-items-center justify-content-center"
       content='Our Services'
-      subheader='We are proud to offer the highest quality personalized treatment to suit your needs.'
+      subheader='We provide results-driven therapy for the following conditions and more.'
     />
     <QuoteBanner
-      className="font-xl text-align-center margin-top-bottom-70"
-      content='One-on-one therapy services are provided by experienced Physical Therapists, offered in private treatment rooms with state-of-the-art equipment.'
+      className="font-lgr text-align-center margin-top-bottom-70"
+      content='If you do not see your diagnosis on the list below, please give us a call! We would love to know more about your needs and concerns.'
     />
     <ServicesAccordion services={servicesContent} />
   </Container>

@@ -270,14 +270,17 @@
 
 
 .word-break- {
-  &.normal {
+  &normal {
     word-break: normal;
   }
-  &.keep-all {
+  &keep-all {
     word-break: keep-all;
   }
-  &.break-all {
+  &break-all {
     word-break: break-all;
+  }
+  &break-word {
+    word-break: break-word;
   }
 }
 
@@ -297,3 +300,10 @@
   }
 }
 
+a.link-white {
+  color: $lightTan;
+  &:hover {
+    color: #ef9357;
+    text-decoration: underline;
+  }
+}

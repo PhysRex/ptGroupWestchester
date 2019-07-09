@@ -28,7 +28,7 @@ export const BiographyBanner = ({ content }) => (
               <Header>
                 <h2 className="font-family-cinzel">
                   {name}
-                  <Label content={degrees} size='tiny' className=""/>
+                  { degrees && <Label content={degrees} size='tiny' className=""/>}
                 </h2>
                 <Header.Subheader
                   className="font-family-merriweather"
@@ -36,7 +36,7 @@ export const BiographyBanner = ({ content }) => (
                 />
               </Header>
               <p className='font-lg'>{description}</p>
-              <p className='font-xl-less font-weight-800 font-family-oleo'>&quot;{quote}&quot;</p>
+              {/* <p className='font-xl-less font-weight-800 font-family-oleo'>&quot;{quote}&quot;</p> */}
             </Grid.Column>
           </Grid.Row>
         )
