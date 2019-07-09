@@ -16,7 +16,7 @@ import  { shared } from '../../copy';
  * @returns {JSX} The rendered ReactJS component
  */
 export const Footer = () => (
-  <Grid className="bg-primary" centered>
+  <Grid className="bg-primaryLight" centered>
     <Container className="margin-20">
       <Grid stackable>
         <Grid.Row className="" columns="equal">

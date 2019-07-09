@@ -102,6 +102,51 @@ $bannerHeight: 102vh;
   }
 }
 
+@mixin bannerImageOpaque($imageName) {
+  .banner-image-#{$imageName} {
+    position: relative;
+    z-index: 1;
+    height: $bannerHeight;
+    &::before {
+      background-image: url('./assets/images/' + $imageName + '.jpg') !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -o-background-size: cover !important;
+      background-size: cover !important;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      height: $bannerHeight;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // opacity: .4;
+      // filter: grayscale(100%);
+      // filter: blur(1px);
+      filter: brightness(80%) sepia(40%);
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .banner-image-#{$imageName} {
+      &::before {
+        background-position: right -100px bottom 0px;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .banner-image-#{$imageName} {
+      &::before {
+        background-position: right -130px bottom 0px;
+        background-attachment:scroll;
+      }
+    }
+  }
+}
+
 @mixin bannerBackgroundColor($colorName, $color) {
   .banner-background-#{$colorName} {
     position: relative;
@@ -141,3 +186,6 @@ $bannerHeight: 102vh;
 @include bannerImage('beach-sand-waves-rock');
 @include bannerImage('beach-sand-wavy');
 @include bannerImage('mountains-riverside');
+@include bannerImage('group-picture');
+@include bannerImage('doctor-holding-hands');
+@include bannerImageOpaque('person-with-laptop');

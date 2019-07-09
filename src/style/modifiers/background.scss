@@ -1,6 +1,7 @@
 
 .bg- {
   &primary { background-color: $primaryColor; }
+  &primaryLight { background-color: $primaryColorLight; }
   &primaryAlternate { background-color: $primaryColorAlternate; }
   &secondary { background-color: $secondaryColor; }
   &tertiary { background-color: $tertiaryColor; }

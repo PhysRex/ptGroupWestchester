@@ -19,9 +19,9 @@ const Home = () => (
     />
     <DividedBanner content={bannerContent} />
     <HoursAndDirections />
-    <QuoteBanner
-      className="font-xl text-align-center margin-top-bottom-70"
-      content='Your health and your care is our utmost priority.'
+    <HeaderImageBanner
+      className="banner-image-person-with-laptop flex align-items-center justify-content-center text-shadow-medium"
+      subheader='We participate with many insurance plans from a variety of insurance companies. We always check your physical therapy benefits, prior to your visit, and we would be happy to discuss them with you throughout your care. If you have any questions about whether we take your insurance, please give us a call or send us an email, and we will get back to you with all the necessary information as soon as possible.'
     />
     <ReferralBanner />
   </Container>

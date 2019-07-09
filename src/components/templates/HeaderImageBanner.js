@@ -16,7 +16,7 @@ const HeaderImageBanner = ({
         <div>
           <h1 className="text-white font-5rem font-4rem-mobile font-family-merriweather margin-bottom-0">{primaryContent}</h1>
           <h1 className="text-white font-4rem font-3rem-mobile  font-family-sofia margin-top-0">{secondaryContent}</h1>
-          <p className="text-white font-lgst font-1rem-mobile">{subheader}</p>
+          <p className="text-white font-lgst font-20px-mobile">{subheader}</p>
         </div>
       </Grid.Column>
       <Grid.Column computer={7} tablet={4}/>

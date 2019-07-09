@@ -49,6 +49,13 @@
       }
     }
   }
+  @for $i from 1 through 20 {
+    &#{$i}px-mobile {
+      @media only screen and (max-width: 600px) {
+        font-size: $i + px;
+      }
+    }
+  }
 }
 .f-font- {
   &xxs {
@@ -174,6 +181,18 @@
   // text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.85);
   // text-shadow: 2px 2px 3px rgba(255,255,255,0.35);
 }
+@mixin textShadowMedium() {
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  // text-shadow: 1px 1px 1px rgba(167, 165, 165, 0.65);
+  // text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+  // text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.65);
+  // text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.65);
+  // text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.65);
+  // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
+  // text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.85);
+  // text-shadow: 2px 2px 3px rgba(255,255,255,0.35);
+}
 @mixin textShadowLong() {
   text-shadow:
     0 6px 1px rgba(0,0,0,.1),
@@ -190,6 +209,9 @@
   }
   &default {
     @include textShadowDefault();
+  }
+  &medium {
+    @include textShadowMedium();
   }
   &long {
     @include textShadowLong();
@@ -218,7 +240,7 @@
   // font-family: 'Titillium Web';
 }
 .font-family- {
-  &Titillium {
+  &titillium {
     font-family: 'Titillium Web', sans-serif;
   }
   &playfair {
