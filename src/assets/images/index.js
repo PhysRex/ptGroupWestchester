@@ -40,7 +40,7 @@ import fatherChildrenBeach from './father-children-beach.jpg';
 import fatherSonBeachSunset from './father-son-beach-sunset.jpg';
 import familyBeachSunset from './family-beach-sunset.jpg';
 import fatherHoldingChildBeach from './father-holding-child-beach.jpg';
-
+import hssLogo from './logo/HSS-Logo-Official.png'
 
 export {
   artWallColorPattern,
@@ -85,4 +85,6 @@ export {
   fatherSonBeachSunset,
   familyBeachSunset,
   fatherHoldingChildBeach,
+
+  hssLogo,
 }
