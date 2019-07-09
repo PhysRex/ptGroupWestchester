@@ -17,7 +17,8 @@ const Forms = () => (
       subheader='We provide results-driven therapy for the following conditions and more.'
     />
     <QuoteBanner
-      className="font-lgr text-align-center margin-top-bottom-70"
+      fontName='rouge'
+      className="font-xl text-align-center margin-top-40 margin-bottom-20"
       content='If you do not see your diagnosis on the list below, please give us a call! We would love to know more about your needs and concerns.'
     />
     <ServicesAccordion services={servicesContent} />
