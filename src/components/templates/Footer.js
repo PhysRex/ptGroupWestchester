@@ -58,7 +58,7 @@ export const Footer = () => (
             </Header>
             {/* TODO: fix how this looks */}
             <div> 
-              <div>Phone: <a className="link-white" href={`tel:+${shared.business.telephone}`}>{shared.business.telephone}</a></div>
+              <div>Phone: <a className="link-white" href={`tel:+1${shared.business.telephone}`}>{shared.business.telephone}</a></div>
               <div>Fax: {shared.business.fax}</div>
               <div>Email: <a className="link-white" href={`mailto:${shared.business.email}`}>{shared.business.email}</a></div>
             </div>

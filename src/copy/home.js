@@ -1,12 +1,9 @@
 import {
   practiceOutsideEdited,
-  hengAndFamilyEdited,
   backMassage,
 } from '../assets/images';
 import {
-  gym,
   gymOffice,
-  waitingRoom
 } from '../assets/images/office';
 
 

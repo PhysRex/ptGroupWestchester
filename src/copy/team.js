@@ -5,8 +5,7 @@ import {
   stephaniePackard,
   oliviaChun,
 } from '../assets/images/staff';
-{
-}
+
 
 const bioContent = [
   {

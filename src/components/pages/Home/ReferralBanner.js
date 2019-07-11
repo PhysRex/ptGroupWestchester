@@ -1,8 +1,6 @@
 import React from 'react';
-import { 
-  Container,
+import {
   Grid,
-  Segment,
   Image,
  } from 'semantic-ui-react';
 
@@ -11,11 +9,12 @@ import {
 /**
  * Creates a banner with a logo and quote
  */
-const ReferralBanner = () => (
-  <Container>
+const ReferralBanner = ({ className }) => (
+  // <Container>
     <Grid
       stackable
       padded
+      className={className}
     >
       <Grid.Row
         centered
@@ -39,7 +38,7 @@ const ReferralBanner = () => (
       </Grid.Column>
       </Grid.Row>
     </Grid>
-  </Container>
+  // </Container>
 );
 
 
