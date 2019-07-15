@@ -1,7 +1,7 @@
 import {
   henryChen,
   karenMorissey,
-  libbyFiliberto,
+  // libbyFiliberto,
   stephaniePackard,
   oliviaChun,
 } from '../assets/images/staff';
@@ -22,13 +22,13 @@ const bioContent = [
     description: ' Karen graduated from St. Thomas Aquinas College, Magna Cum Laude with a Bachelor of Science degree in Marketing in 1995. After a brief career in Advertising, she realized that she wanted a career that would allow her to focus on helping others. In the year 2000, she reached her goal and graduated with her Masters degree in Physical Therapy from New York Medical College in Valhalla. The first 13 years of her career were spent working in outpatient orthopedics here in Westchester county, where she gained vast experience treating a variety of post surgical and sports-related injuries. In 2013, a strong interest in the aging population led her to spend time working in Assisted Living Facilities in both New York and New Jersey. During this time, Karen enjoyed providing individualized, function based rehabilitation for a variety of gait, balance, orthopedic and neurologic conditions affecting the older population. Karen joined the team at Physical Therapy Group of Westchester in 2015. She has since been busy taking continuing education classes concerning vestibular issues, fall prevention and exercise for the elderly. She is planning to pursue her certification in Vestibular Rehabilitation. She is at home in Rockland County, where she was born and raised. During her free time, Karen enjoys spending time with her husband and her three sons.',
     image: karenMorissey,
   },
-  {
-    name: 'Libby Filiberto',
-    role: 'Medical Receptionist',
-    degrees: '',
-    description: 'Libby has been working as a physical therapy receptionist for ten years.  She enjoys getting to know the patients as they go through their journeys back to wellness.  Last year, she decided to stop working full-time and found her new work family here at Physical Therapy Group of Westchester as a part-time employee. She loves her job here and has the best of both worlds. She gets to spend more time with her husband, kids and last but certainly not least, their two kittens, Frankie and Pablo and don’t tell the cats, but her favorite, their dog Louise.',
-    image: libbyFiliberto,
-  },
+  // {
+  //   name: 'Libby Filiberto',
+  //   role: 'Medical Receptionist',
+  //   degrees: '',
+  //   description: 'Libby has been working as a physical therapy receptionist for ten years.  She enjoys getting to know the patients as they go through their journeys back to wellness.  Last year, she decided to stop working full-time and found her new work family here at Physical Therapy Group of Westchester as a part-time employee. She loves her job here and has the best of both worlds. She gets to spend more time with her husband, kids and last but certainly not least, their two kittens, Frankie and Pablo and don’t tell the cats, but her favorite, their dog Louise.',
+  //   image: libbyFiliberto,
+  // },
   {
     name: 'Stephanie Packard',
     role: 'Medical Receptionist',
