@@ -16,6 +16,7 @@
     "react-scripts": "2.0.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0",
+    "true-case-path": "^2.2.1",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
