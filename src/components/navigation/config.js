@@ -3,7 +3,8 @@ import fp from 'lodash/fp';
 
 import Pages from '../pages';
 
-const baseRoute = '/ptGroupWestchester';
+const baseRoute = '';
+// const baseRoute = '/ptGroupWestchester';
 const homePage = 'Home';
 const errorPage = 'ErrorPage';
 const pagesToOmitOnRoute = ['Dashboard', 'Profile'];
