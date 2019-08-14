@@ -39,7 +39,7 @@ import practiceOutsideEdited from './practice-outside-edited.png';
 // import fatherChildrenBeach from './father-children-beach.jpg';
 // import fatherSonBeachSunset from './father-son-beach-sunset.jpg';
 // import familyBeachSunset from './family-beach-sunset.jpg';
-// import fatherHoldingChildBeach from './father-holding-child-beach.jpg';
+import fatherHoldingChildBeach from './father-holding-child-beach.jpg';
 // import personWithLaptop from './person-with-laptop.jpg';
 import hssLogo from './logo/HSS-Logo-Official.png'
 
@@ -85,7 +85,7 @@ export {
   // fatherChildrenBeach,
   // fatherSonBeachSunset,
   // familyBeachSunset,
-  // fatherHoldingChildBeach,
+  fatherHoldingChildBeach,
   // personWithLaptop,
 
   hssLogo,

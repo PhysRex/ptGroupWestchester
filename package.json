@@ -7,17 +7,15 @@
   },
   "dependencies": {
     "lodash": "^4.17.13",
-    "mkdirp": "^0.5.1",
     "node-sass": "^4.10.0",
     "react": "^16.4.2",
     "react-dev-utils": "^9.0.2",
     "react-dom": "^16.4.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.3",
+    "react-scripts": "3.1.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0",
-    "true-case-path": "^2.2.1",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
