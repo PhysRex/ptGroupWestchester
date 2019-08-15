@@ -29,7 +29,6 @@
     "debug": "^4.1.0",
     "gh-pages": "^2.0.1"
   },
-  "homepage": "http://PhysRex.github.io/ptGroupWestchester",
   "browserslist": [
     ">0.2%",
     "not dead",
