@@ -26,3 +26,11 @@
     position: fixed;
   }
 }
+
+/* to make a mobile responsive view of the referral banner */
+@media only screen and (max-width: 600px) {
+  .referral-banner--image {
+    margin-bottom: -50px !important;
+  }
+}
+
