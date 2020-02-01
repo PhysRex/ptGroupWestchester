@@ -1,7 +1,8 @@
 // import artWallColorPattern from './art-wall-color-pattern.jpg';
 // import forestTruckOpen from './forest-truck-open.jpg';
 // import neckAdjustment from './neck-adjustment.jpg';
-import backMassage from './back-massage.jpg';
+import backMassage from './back-massage__compressed.jpg';
+// import backMassageMobile from './back-massage__mobile.jpg';
 // import grayDryTrunk from './gray-dry-trunk.jpg';
 // import parentsAtMountaintop from './parents-at-mountaintop.jpg';
 // import backMassageFocused from './back-massage-focused.jpg';
@@ -23,7 +24,8 @@ import backMassage from './back-massage.jpg';
 // import hengAndFamilyEdited from './heng-and-family-edited.jpg';
 // import practiceOutside from './practice-outside.png';
 // import doctorGeneric from './doctor-generic.jpg';
-import practiceOutsideEdited from './practice-outside-edited.png';
+import practiceOutsideEdited from './practice-outside-edited__compressed.png';
+// import practiceOutsideEditedMobile from './practice-outside-edited__mobile.png';
 // import doctorHoldingHands from './doctor-holding-hands.jpg';
 // import profile1 from './profile-1.jpg';
 // import dryBark from './dry-bark.jpg';
@@ -39,9 +41,11 @@ import practiceOutsideEdited from './practice-outside-edited.png';
 // import fatherChildrenBeach from './father-children-beach.jpg';
 // import fatherSonBeachSunset from './father-son-beach-sunset.jpg';
 // import familyBeachSunset from './family-beach-sunset.jpg';
-import fatherHoldingChildBeach from './father-holding-child-beach.jpg';
+import fatherHoldingChildBeach from './father-holding-child-beach__compressed.jpg';
+// import fatherHoldingChildBeachMobile from './father-holding-child-beach__mobile.jpg';
 // import personWithLaptop from './person-with-laptop.jpg';
-import hssLogo from './logo/HSS-Logo-Official.png'
+import hssLogo from './logo/HSS-Logo-Official__compressed.png'
+// import hssLogoMobile from './logo/HSS-Logo-Official__mobile.png'
 
 export {
   // artWallColorPattern,
@@ -87,6 +91,9 @@ export {
   // familyBeachSunset,
   fatherHoldingChildBeach,
   // personWithLaptop,
-
+  // backMassageMobile,
+  // practiceOutsideEditedMobile,
+  // fatherHoldingChildBeachMobile,
   hssLogo,
+  // hssLogoMobile,
 }

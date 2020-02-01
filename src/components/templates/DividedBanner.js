@@ -33,7 +33,8 @@ const DividedBanner = ({ content }) => (
             >
               <Image
                 className=""
-                src={image}
+                src={image.desktop}
+                srcSet={`${image.mobile} 375w, ${image.desktop}`}
                 rounded
                 fluid
               />

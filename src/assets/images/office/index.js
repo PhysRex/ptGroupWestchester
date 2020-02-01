@@ -1,9 +1,7 @@
-import gym from './gym.jpg';
-import gymOffice from './gym-office.jpg';
-import waitingRoom from './waiting-room.jpg';
+import gymOffice from './gym-office__compressed.jpg';
+// import gymOfficeMobile from './gym-office__mobile.jpg';
 
 export {
-  gym,
   gymOffice,
-  waitingRoom,
+  // gymOfficeMobile,
 }

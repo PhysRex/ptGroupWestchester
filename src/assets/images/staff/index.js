@@ -1,7 +1,7 @@
-import henryChen from './henry-chen.jpg';
-import karenMorissey from './karen-morissey.jpg';
-import oliviaChun from './olivia-chun.jpg';
-import stephaniePackard from './stephanie-packard.jpg';
+import henryChen from './henry-chen__compressed.jpg';
+import karenMorissey from './karen-morissey__compressed.jpg';
+import oliviaChun from './olivia-chun__compressed.jpg';
+import stephaniePackard from './stephanie-packard__compressed.jpg';
 
 export {
   henryChen,
