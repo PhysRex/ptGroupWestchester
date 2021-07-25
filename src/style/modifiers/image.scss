@@ -65,7 +65,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
     z-index: 1;
     height: $bannerHeight;
     &::before {
-      background-image: url($imageUrlBase + $imageName + '__compressed.jpg');
+      background-image: url($imageUrlBase + $imageName + '__compressed.jpg?tr=w-1280,h-800');
       -webkit-background-size: cover !important;
       -moz-background-size: cover !important;
       -o-background-size: cover !important;
