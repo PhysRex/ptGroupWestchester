@@ -32,9 +32,6 @@ const srcForMaps = `${mapsUrl.route}?${convertObjToUrlParams(mapsUrl.params)}`;
  * @returns {JSX} The rendered ReactJS component
  */
 export const HoursAndDirections = () => {
-  const params = new URLSearchParams(window.location.search);
-  const showScheduler = params.get('scheduler')
-
   return (
     <Grid className="bg-secondary">
       <Container className="margin-40">
@@ -83,26 +80,24 @@ export const HoursAndDirections = () => {
             </Grid.Column>
           </Grid.Row>
 
-          { showScheduler &&
-            <Grid.Row className="" centered>
-              <Grid.Column mobile={16} tablet={10} computer={10}>
-                <Header as='h2' textAlign='center' className="f-text-white">
-                  Appointments
-                  <Header.Subheader>
-                    Click below to request an appointment online
-                  </Header.Subheader>
-                </Header>
-                <Grid padded='horizontally' className="f-margin-top-bottom-10" centered>
-                <a href='https://www.betterpt.com/booking/referral/company/17/clinic/36/pretime' target='_blank' rel="noopener noreferrer">
-                  <Button
-                    content='Request Appointment'
-                    icon='pencil'
-                  />
-                </a>
-                </Grid>
-              </Grid.Column>
-            </Grid.Row>
-          }
+          <Grid.Row className="" centered>
+            <Grid.Column mobile={16} tablet={10} computer={10}>
+              <Header as='h2' textAlign='center' className="f-text-white">
+                Appointments
+                <Header.Subheader>
+                  Click below to request an appointment online
+                </Header.Subheader>
+              </Header>
+              <Grid padded='horizontally' className="f-margin-top-bottom-10" centered>
+              <a href='https://www.betterpt.com/booking/referral/company/17/clinic/36/pretime' target='_blank' rel="noopener noreferrer">
+                <Button
+                  content='Request Appointment'
+                  icon='pencil'
+                />
+              </a>
+              </Grid>
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </Container>
     </Grid>
