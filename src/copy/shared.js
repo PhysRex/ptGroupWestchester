@@ -16,7 +16,7 @@ export default {
       zipCode: '10573',
       country: 'USA',
     },
-    email: 'ptwestchester@verizon.net',
+    email: 'ptgroupwestchester@gmail.com',
     hours: [
       {
         day: 'Monday',
