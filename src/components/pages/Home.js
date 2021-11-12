@@ -12,6 +12,7 @@ const Home = () => (
       primaryContent='Physical Therapy Group'
       secondaryContent='of Westchester'
       subheader={headerContent.description}
+      showAppointment={true}
     />
     <QuoteBanner
       className="font-xl text-align-center margin-top-bottom-70"
