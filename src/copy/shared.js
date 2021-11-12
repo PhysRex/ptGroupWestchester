@@ -11,7 +11,7 @@ export default {
     address: {
       street: '10 Rye Ridge Plaza',
       suite: 219,
-      city: 'Rye',
+      city: 'Rye Brook',
       state: 'NY',
       zipCode: '10573',
       country: 'USA',
@@ -21,27 +21,27 @@ export default {
       {
         day: 'Monday',
         open: '7AM',
-        close: '7PM',
+        close: '6PM',
       },
       {
         day: 'Tuesday',
         open: '7AM',
-        close: '7PM',
+        close: '6PM',
       },
       {
         day: 'Wednesday',
         open: '7AM',
-        close: '7PM',
+        close: '6PM',
       },
       {
         day: 'Thursday',
         open: '7AM',
-        close: '7PM',
+        close: '6PM',
       },
       {
         day: 'Friday',
         open: '7AM',
-        close: '7PM',
+        close: '6PM',
       },
       {
         day: 'Saturday',
@@ -53,7 +53,7 @@ export default {
       },
     ],
     hoursShort: [
-      'Mon - Fri 7AM - 7PM'
+      'Mon - Fri 7AM - 6PM'
     ]
   },
 }
