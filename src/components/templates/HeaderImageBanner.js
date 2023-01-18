@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   Grid,
   Header,
   Button,
@@ -20,7 +20,7 @@ const HeaderImageBanner = ({
           <h1 className="text-white font-5rem font-4rem-mobile font-family-merriweather margin-bottom-0">{primaryContent}</h1>
           <h1 className="text-white font-4rem font-3rem-mobile  font-family-sofia margin-top-0">{secondaryContent}</h1>
           <p className="text-white font-lgst font-20px-mobile  margin-bottom-0">{subheader}</p>
-          { showAppointment &&
+          {showAppointment &&
             <div className="header-appointment">
               <Header as='h2' className="f-text-white header-container">
                 Appointments
@@ -28,7 +28,7 @@ const HeaderImageBanner = ({
                   Click below to request an appointment online
                 </Header.Subheader>
               </Header>
-              <a href='https://www.betterpt.com/booking/referral/company/17/clinic/36/pretime' target='_blank' rel="noopener noreferrer"  className="button-container">
+              <a href='https://forms.gle/oJCM7mUNUqnWLcJ68' target='_blank' rel="noopener noreferrer" className="button-container">
                 <Button
                   content='Request Appointment'
                   icon='pencil'
@@ -37,8 +37,8 @@ const HeaderImageBanner = ({
             </div>
           }
         </Grid.Column>
-        <Grid.Column computer={7} tablet={4}/>
-        
+        <Grid.Column computer={7} tablet={4} />
+
       </Grid.Row>
     </Grid>
   </>
