@@ -9,41 +9,50 @@
     -webkit-filter: blur(4px);
     filter: blur(4px);
   }
+
   &.brightness {
     -webkit-filter: brightness(250%);
     filter: brightness(250%);
   }
+
   &.contrast {
     -webkit-filter: contrast(180%);
     filter: contrast(180%);
   }
+
   &.grayscale {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
+
   &.huerotate {
     -webkit-filter: hue-rotate(180deg);
     filter: hue-rotate(180deg);
   }
+
   &.invert {
     -webkit-filter: invert(100%);
     filter: invert(100%);
   }
+
   &.opacity {
     -webkit-filter: opacity(50%);
     filter: opacity(50%);
   }
+
   &.saturate {
     -webkit-filter: saturate(7);
     filter: saturate(7);
   }
+
   &.sepia {
     -webkit-filter: sepia(100%);
     filter: sepia(100%);
   }
+
   &.shadow {
-    -webkit-filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
-    filter: drop-shadow(8px 8px 10px rgba(0, 0 ,0 , 0.5));
+    -webkit-filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -57,6 +66,7 @@
 
 $bannerHeight: 102vh;
 $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
+
 // $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/father-holding-child-beach__compressed.jpg';
 // https://ik.imagekit.io/dydactly/ptg-westchester/father-holding-child-beach__mobile.jpg
 @mixin bannerImage($imageName) {
@@ -64,6 +74,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
     position: relative;
     z-index: 1;
     height: $bannerHeight;
+
     &::before {
       background-image: url($imageUrlBase + $imageName + '__compressed.jpg?tr=w-1920,h-1080');
       -webkit-background-size: cover !important;
@@ -88,6 +99,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
       // filter: brightness(120%);
     }
   }
+
   @media only screen and (max-width: 1024px) {
     .banner-image-#{$imageName} {
       &::before {
@@ -95,11 +107,12 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
       }
     }
   }
+
   @media only screen and (max-width: 600px) {
     .banner-image-#{$imageName} {
       &::before {
         background-position: right -130px bottom 0px;
-        background-attachment:scroll;
+        background-attachment: scroll;
       }
     }
   }
@@ -110,6 +123,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
     position: relative;
     z-index: 1;
     height: $bannerHeight;
+
     &::before {
       background-image: url('../../assets/images/' + $imageName + '__compressed.jpg') !important;
       -webkit-background-size: cover !important;
@@ -133,6 +147,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
       filter: brightness(80%) sepia(40%);
     }
   }
+
   @media only screen and (max-width: 1024px) {
     .banner-image-#{$imageName} {
       &::before {
@@ -140,11 +155,12 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
       }
     }
   }
+
   @media only screen and (max-width: 600px) {
     .banner-image-#{$imageName} {
       &::before {
         background-position: right -130px bottom 0px;
-        background-attachment:scroll;
+        background-attachment: scroll;
       }
     }
   }
@@ -155,6 +171,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
     position: relative;
     // z-index: 1;
     height: 40vh;
+
     &::before {
       height: 40vh;
       content: "";
@@ -177,6 +194,7 @@ $imageUrlBase: 'https://ik.imagekit.io/dydactly/ptg-westchester/';
 
 @include bannerBackgroundColor('bannerPrimary', $primaryColor);
 @include bannerBackgroundColor('bannerSecondary', $secondaryColor);
+@include bannerBackgroundColor('bannerPrimaryLight', $primaryColorLight);
 // @include bannerBackgroundColor('bannerPrime', $celestialBlue);
 
 

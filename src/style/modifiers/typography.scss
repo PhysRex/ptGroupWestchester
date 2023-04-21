@@ -1,47 +1,59 @@
-
 /* font-sizes */
 .font- {
   &xxs {
     font-size: 0.125rem;
   }
+
   &xs {
     font-size: 0.25rem;
   }
+
   &sm {
     font-size: 0.5rem;
   }
+
   &md {
     font-size: 0.75rem;
   }
+
   &lg {
     font-size: 1rem;
   }
+
   &lgr {
     font-size: 1.25rem;
   }
+
   &lgst {
     font-size: 1.5rem;
   }
+
   &xl-less {
     font-size: 1.75rem;
   }
+
   &xl {
     font-size: 2rem;
   }
+
   &xlr {
     font-size: 2.25rem;
   }
+
   &xxl {
     font-size: 3rem;
   }
+
   &xxlr {
     font-size: 3.5rem;
   }
+
   @for $i from 1 through 20 {
     &#{$i}rem {
       font-size: $i + rem;
     }
   }
+
   @for $i from 1 through 20 {
     &#{$i}rem-mobile {
       @media only screen and (max-width: 600px) {
@@ -49,6 +61,7 @@
       }
     }
   }
+
   @for $i from 1 through 20 {
     &#{$i}px-mobile {
       @media only screen and (max-width: 600px) {
@@ -57,48 +70,62 @@
     }
   }
 }
+
 .f-font- {
   &xxs {
     font-size: 0.125rem !important;
   }
+
   &xs {
     font-size: 0.25rem !important;
   }
+
   &sm {
     font-size: 0.5rem !important;
   }
+
   &md {
     font-size: 0.75rem !important;
   }
+
   &lg {
     font-size: 1rem !important;
   }
+
   &lgr {
     font-size: 1.25rem !important;
   }
+
   &lgst {
     font-size: 1.5rem !important;
   }
+
   &xl-less {
     font-size: 1.75rem !important;
   }
+
   &xl {
     font-size: 2rem !important;
   }
+
   &xlr {
     font-size: 2.25rem !important;
   }
+
   &xxl {
     font-size: 3rem !important;
   }
+
   &xxlr {
     font-size: 3.5rem !important;
   }
+
   @for $i from 1 through 20 {
     &#{$i}rem {
       font-size: $i + "rem !important";
     }
   }
+
   @for $i from 1 through 20 {
     &#{$i}rem-mobile {
       @media only screen and (max-width: 600px) {
@@ -110,30 +137,82 @@
 
 /* font-weight */
 .font-weight- {
-  &100 { font-weight: 100;}
-  &200 { font-weight: 200;}
-  &300 { font-weight: 300;}
-  &400 { font-weight: 400;}
-  &500 { font-weight: 500;}
-  &600 { font-weight: 600;}
-  &700 { font-weight: 700;}
-  &800 { font-weight: 800;}
+  &100 {
+    font-weight: 100;
+  }
+
+  &200 {
+    font-weight: 200;
+  }
+
+  &300 {
+    font-weight: 300;
+  }
+
+  &400 {
+    font-weight: 400;
+  }
+
+  &500 {
+    font-weight: 500;
+  }
+
+  &600 {
+    font-weight: 600;
+  }
+
+  &700 {
+    font-weight: 700;
+  }
+
+  &800 {
+    font-weight: 800;
+  }
 }
 
 /* font color */
 .text- {
-  &white { color: $lightTan; }
-  &red { color: $red; }
-  &green { color: $green; }
-  &blue { color: $blue; }
-  &primary { color: $primaryColor; }
-  &primary-alternate { color: $primaryColorAlternate; }
+  &white {
+    color: $lightTan;
+  }
+
+  &red {
+    color: $red;
+  }
+
+  &green {
+    color: $green;
+  }
+
+  &blue {
+    color: $blue;
+  }
+
+  &primary {
+    color: $primaryColor;
+  }
+
+  &primary-alternate {
+    color: $primaryColorAlternate;
+  }
 }
-.f-text-{
-  &white { color: $lightTan !important; }
-  &red { color: $red !important; }
-  &green { color: $green !important; }
-  &blue { color: $blue !important; }
+
+.f-text- {
+  &white {
+    color: $lightTan !important;
+  }
+
+  &red {
+    color: $red !important;
+  }
+
+  &green {
+    color: $green !important;
+  }
+
+  &blue {
+    color: $blue !important;
+  }
 }
 
 /* Text-align */
@@ -141,9 +220,11 @@
   &left {
     text-align: left;
   }
+
   &right {
     text-align: right;
   }
+
   &center {
     text-align: center;
   }
@@ -154,12 +235,15 @@
   &bottom {
     vertical-align: bottom;
   }
+
   &middle {
     vertical-align: middle;
   }
+
   &top {
     vertical-align: top;
   }
+
   &baseline {
     vertical-align: baseline;
   }
@@ -181,6 +265,7 @@
   // text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.85);
   // text-shadow: 2px 2px 3px rgba(255,255,255,0.35);
 }
+
 @mixin textShadowMedium() {
   text-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
   // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -193,29 +278,35 @@
   // text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.85);
   // text-shadow: 2px 2px 3px rgba(255,255,255,0.35);
 }
+
 @mixin textShadowLong() {
   text-shadow:
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
 }
+
 .text-shadow- {
   &none {
     text-shadow: none;
   }
+
   &default {
     @include textShadowDefault();
   }
+
   &medium {
     @include textShadowMedium();
   }
+
   &long {
     @include textShadowLong();
   }
+
   &inner {
     // background-color: #000;
     // color: transparent;
@@ -239,52 +330,68 @@
   // font-family: 'Sofia', cursive;
   // font-family: 'Titillium Web';
 }
+
 .font-family- {
   &titillium {
     font-family: 'Titillium Web', sans-serif;
   }
+
   &playfair {
     font-family: 'Playfair Display SC', serif;
   }
+
   &quattrocento {
     font-family: 'Quattrocento', serif;
   }
+
   &ultra {
     font-family: 'Ultra', serif;
   }
+
   &alegreya {
     font-family: 'Alegreya SC', serif;
   }
+
   &cinzel {
     font-family: 'Cinzel', cursive;
   }
+
   &cinzel-decorative {
     font-family: 'Cinzel Decorative', cursive;
   }
+
   &merriweather {
     font-family: 'Merriweather', serif;
   }
+
   &rouge {
     font-family: 'Rouge Script', cursive;
   }
+
   &oleo {
     font-family: 'Oleo Script Swash Caps', cursive;
   }
+
   &sofia {
     font-family: 'Sofia', cursive;
   }
+
   &laila {
     font-family: 'Laila', cursive;
   }
+
   &parisienne {
     font-family: 'Parisienne', cursive;
   }
+
   &mate {
     font-family: 'Mate SC', serif;
   }
+
   &diplomata {
     font-family: 'Diplomata SC', cursive;
   }
+
   &gravitas {
     font-family: 'Gravitas One', cursive;
   }
@@ -295,12 +402,15 @@
   &normal {
     word-break: normal;
   }
+
   &keep-all {
     word-break: keep-all;
   }
+
   &break-all {
     word-break: break-all;
   }
+
   &break-word {
     word-break: break-word;
   }
@@ -313,6 +423,7 @@
       line-height: $i + rem;
     }
   }
+
   @for $i from 1 through 20 {
     &#{$i}rem-mobile {
       @media only screen and (max-width: 600px) {
@@ -324,8 +435,13 @@
 
 a.link-white {
   color: $lightTan;
+
   &:hover {
     color: #ef9357;
     text-decoration: underline;
   }
+}
+
+.text-underline {
+  text-decoration: underline;
 }
