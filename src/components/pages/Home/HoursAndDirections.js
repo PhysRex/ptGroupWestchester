@@ -22,7 +22,7 @@ const mapsUrl = {
     ie: 'UTF8', // encoding?
     iwloc: '',
     output: 'embed',
-  } 
+  }
 }
 
 const srcForMaps = `${mapsUrl.route}?${convertObjToUrlParams(mapsUrl.params)}`;
@@ -45,14 +45,14 @@ export const HoursAndDirections = () => {
                 </Header.Subheader> */}
               </Header>
               <Grid padded='horizontally' className="f-margin-top-bottom-30">
-              {
-                shared.business.hours.map(({day, open, close, isClosed}) => 
-                  <Grid.Row key={day} columns={2} className="f-padding-top-bottom-5 font-lgr">
-                    <Grid.Column textAlign='right'>{day}</Grid.Column>
-                    <Grid.Column textAlign='left'>{isClosed ? 'Closed' : `${open} - ${close}`}</Grid.Column>
-                  </Grid.Row>
-                )
-              }
+                {
+                  shared.business.hours.map(({ day, open, close, isClosed }) =>
+                    <Grid.Row key={day} columns={2} className="f-padding-top-bottom-5 font-lgr">
+                      <Grid.Column textAlign='right'>{day}</Grid.Column>
+                      <Grid.Column textAlign='left'>{isClosed ? 'Closed' : `${open} - ${close}`}</Grid.Column>
+                    </Grid.Row>
+                  )
+                }
               </Grid>
             </Grid.Column>
 
@@ -89,12 +89,12 @@ export const HoursAndDirections = () => {
                 </Header.Subheader>
               </Header>
               <Grid padded='horizontally' className="f-margin-top-bottom-10" centered>
-              <a href='https://www.betterpt.com/booking/referral/company/17/clinic/36/pretime' target='_blank' rel="noopener noreferrer">
-                <Button
-                  content='Request Appointment'
-                  icon='pencil'
-                />
-              </a>
+                <a href='https://forms.gle/oJCM7mUNUqnWLcJ68' target='_blank' rel="noopener noreferrer">
+                  <Button
+                    content='Request Appointment'
+                    icon='pencil'
+                  />
+                </a>
               </Grid>
             </Grid.Column>
           </Grid.Row>
