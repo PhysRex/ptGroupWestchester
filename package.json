@@ -1,38 +1,27 @@
 {
-  "name": "pt-group-westchester",
-  "version": "0.1.0",
+  "name": "ptg-westchester-vue",
   "private": true,
-  "otherDependencies": {
-    "@blueprintjs/core": "^3.7.0"
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "3.3.1",
-    "sass": "^1.57.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.83.0",
-    "webfontloader": "^1.6.28"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build_deploy": "react-scripts build && cp build/index.html build/404.html",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "@unhead/vue": "^2.1.12",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.30",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
-    "debug": "^4.1.0",
-    "gh-pages": "^2.0.1"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^24.12.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.0",
+    "tailwindcss": "^4.2.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
+    "vue-tsc": "^3.2.5"
+  }
 }
