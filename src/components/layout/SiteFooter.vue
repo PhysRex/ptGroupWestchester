@@ -59,7 +59,9 @@ const fullAddress = `${site.address.street}, ${site.address.suite}, ${site.addre
             <a :href="`mailto:${site.email}`" class="hover:text-ivory transition-colors">
               {{ site.email }}
             </a>
-            <p>{{ fullAddress }}</p>
+            <a :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`" target="_blank" rel="noopener noreferrer" class="hover:text-ivory transition-colors">
+              {{ fullAddress }}
+            </a>
           </div>
         </div>
 
@@ -90,7 +92,7 @@ const fullAddress = `${site.address.street}, ${site.address.suite}, ${site.addre
         <p class="cursor-default select-none" @click="handleCopyrightClick">
           &copy; {{ new Date().getFullYear() }} Physical Therapy Group of Westchester. All rights reserved.
         </p>
-        <p>10 Rye Ridge Plaza, Suite 219, Rye Brook, NY 10573</p>
+        <a :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`" target="_blank" rel="noopener noreferrer" class="hover:text-ivory/60 transition-colors">10 Rye Ridge Plaza, Suite 219, Rye Brook, NY 10573</a>
       </div>
     </div>
   </footer>
