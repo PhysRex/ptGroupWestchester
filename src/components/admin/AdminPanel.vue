@@ -1,7 +1,27 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue'
 import { useAdminStore } from '../../stores/admin'
+import type { ContentFile } from '../../stores/admin'
 
 const admin = useAdminStore()
+const selectedFile = ref<ContentFile>('home')
+const filter = ref('')
+const files: ContentFile[] = ['site', 'home', 'team', 'services', 'forms', 'testimonials']
+
+const editableEntries = computed(() => {
+  const search = filter.value.trim().toLowerCase()
+  const entries = admin.getEditableTextEntries(selectedFile.value)
+  if (!search) return entries
+
+  return entries.filter((entry) => {
+    return entry.path.toLowerCase().includes(search) || entry.value.toLowerCase().includes(search)
+  })
+})
+
+function updateValue(path: string, event: Event) {
+  const target = event.target as HTMLTextAreaElement
+  admin.setEdit(selectedFile.value, path, target.value)
+}
 </script>
 
 <template>
@@ -15,21 +35,60 @@ const admin = useAdminStore()
   >
     <aside
       v-if="admin.isActive"
-      class="fixed top-12 right-4 z-[55] w-72 bg-white border border-navy/10 rounded-sm shadow-xl p-5 max-h-[80vh] overflow-y-auto"
+      class="fixed top-12 right-4 z-[55] w-[min(92vw,32rem)] bg-white border border-navy/10 rounded-sm shadow-xl p-5 max-h-[80vh] overflow-y-auto"
     >
-      <h3 class="font-display text-navy text-lg font-bold mb-3">Admin Guide</h3>
+      <h3 class="font-display text-navy text-lg font-bold mb-3">Live Copy Editor</h3>
       <div class="space-y-3 text-sm text-charcoal/70 leading-relaxed">
         <p>
-          <strong class="text-charcoal">Click any text</strong> on the page to edit it inline.
+          Edit copy fields below and updates will render on-page immediately.
         </p>
         <p>
-          Press <kbd class="px-1.5 py-0.5 bg-sand rounded text-xs font-mono">Esc</kbd> to cancel an edit.
+          Draft edits are saved to this browser until you discard them.
         </p>
         <p>
-          When you're done, click <strong class="text-gold">Export JSON</strong> to download updated content files.
+          Click <strong class="text-gold">Export JSON</strong> when finished and commit those files.
         </p>
-        <p>
-          Commit the downloaded JSON files to the <code class="text-xs bg-sand px-1 rounded">src/content/</code> directory to apply changes.
+      </div>
+
+      <div class="mt-4 pt-4 border-t border-navy/10 space-y-3">
+        <label class="block">
+          <span class="text-xs font-semibold uppercase tracking-wider text-charcoal/70">Content File</span>
+          <select
+            v-model="selectedFile"
+            class="mt-1 w-full border border-navy/15 rounded-sm px-2.5 py-2 text-sm bg-white text-charcoal"
+          >
+            <option v-for="file in files" :key="file" :value="file">{{ file }}.json</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-xs font-semibold uppercase tracking-wider text-charcoal/70">Filter Fields</span>
+          <input
+            v-model="filter"
+            type="text"
+            placeholder="Search by path or value"
+            class="mt-1 w-full border border-navy/15 rounded-sm px-2.5 py-2 text-sm"
+          />
+        </label>
+      </div>
+
+      <div class="mt-4 space-y-3">
+        <div
+          v-for="entry in editableEntries"
+          :key="entry.path"
+          class="border border-navy/10 rounded-sm p-2.5"
+        >
+          <p class="text-[11px] font-mono text-navy/80 mb-1.5 break-all">{{ entry.path }}</p>
+          <textarea
+            :value="entry.value"
+            rows="2"
+            class="w-full border border-navy/10 rounded-sm px-2 py-1.5 text-sm leading-relaxed resize-y min-h-[3rem]"
+            @input="updateValue(entry.path, $event)"
+          />
+        </div>
+
+        <p v-if="editableEntries.length === 0" class="text-xs text-charcoal/60">
+          No editable text fields found for this filter.
         </p>
       </div>
 
@@ -42,7 +101,7 @@ const admin = useAdminStore()
             class="text-xs text-charcoal/60"
           >
             <span class="font-mono text-navy">{{ file }}.json</span>
-            — {{ Object.keys(changes).length }} change{{ Object.keys(changes).length > 1 ? 's' : '' }}
+            - {{ Object.keys(changes).length }} change{{ Object.keys(changes).length > 1 ? 's' : '' }}
           </li>
         </ul>
       </div>

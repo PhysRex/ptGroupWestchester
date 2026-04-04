@@ -62,8 +62,9 @@ public/
 
 Activate via triple-click on footer copyright text, or append `?admin=true` to any URL.
 
-- Enables inline text editing across all pages
-- Tracks changes in Pinia store
+- Enables live editing of copy fields from `src/content/*.json`
+- Updates page copy immediately as you type
+- Persists draft edits in browser localStorage
 - Export updated JSON files via "Export JSON" button
 - Commit exported files back to `src/content/` to apply changes
 
