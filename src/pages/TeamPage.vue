@@ -20,12 +20,10 @@ useScrollReveal()
 // Dynamic image imports
 import henryChen from '../assets/images/staff/henry-chen__compressed.jpg'
 import karenMorissey from '../assets/images/staff/karen-morissey__compressed.jpg'
-import oliviaChun from '../assets/images/staff/olivia-chun__compressed.jpg'
 
 const staffImages: Record<string, string> = {
   'henry-chen__compressed.jpg': henryChen,
   'karen-morissey__compressed.jpg': karenMorissey,
-  'olivia-chun__compressed.jpg': oliviaChun,
 }
 </script>
 
